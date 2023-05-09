@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Forex Bet</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- awesome fontfamily -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="" /></div>
+    </div>
+    <!-- end loader -->
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="forecast.html">Forecasts</a>
+        <a href="testimonial.html">Testimonial</a>
+        <a href="works.html">Works</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="head-top">
+            <div class="container-fluid">
+                <div class="row d_flex">
+                    <div class="col-sm-3">
+                        <div class="logo">
+                            <a href="index.html">Forex Bet</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <ul class="social_icon text_align_right d_none">
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="email text_align_right">
+                            <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                            <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li>
+                            <li>
+                                <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <!-- start slider section -->
+    <div id="top_section" class=" banner_main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive" src="images/eur-usd.jpg" alt="#" /></figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h1>EUR/USD<br> Forecasts</h1>
+                                                    <p>Euro-Dollar pair is popular with traders because its constituents represent the two largest and most influential economies in the world.
+                                                    </p>
+                                                    <a class="read_more" href="Javascript:void(0)">Choose forecast </a><a class="read_more" href="Javascript:void(0)">Real time data </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive" src="images/gold.jpg" alt="#" /></figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h1>XAU/USD <br> Forecasts</h1>
+                                                    <p>Gold has been considered a highly valuable commodity for millennia and the gold price is widely followed in financial markets around the world
+                                                    </p>
+                                                    <a class="read_more" href="Javascript:void(0)">Choose forecast </a><a class="read_more" href="Javascript:void(0)">Real time data </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive" src="images/dax.jpg" alt="#" /></figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h1>DAX <br> Forecasts</h1>
+                                                    <p>The DAX 40, or DAX Index, is a German stock market index comprising the 40 biggest companies - by market capitalization and liquidity - trading on the Frankfurt Stock Exchange (FSE).
+                                                    </p>
+                                                    <a class="read_more" href="Javascript:void(0)">Choose forecast </a><a class="read_more" href="Javascript:void(0)">Real time data </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive" src="images/dow-jones.jpg" alt="#" /></figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h1>DOW JONES <br> Forecasts</h1>
+                                                    <p>The Dow Jones Industrial Average (DJIA), Dow Jones or the Dow for short tracks the performance of 30 of the biggest companies in the US.
+                                                    </p>
+                                                    <a class="read_more" href="Javascript:void(0)">Choose forecast </a><a class="read_more" href="Javascript:void(0)">Real time data </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive" src="images/nasdaq.jpg" alt="#" /></figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h1>NASDAQ <br> Forecasts</h1>
+                                                    <p>The US Tech 100, also known as the Nasdaq 100 index, is a market capitalization system featuring more than 100 of the largest publicly-traded non-financial businesses on the Nasdaq composite index.
+                                                    </p>
+                                                    <a class="read_more" href="Javascript:void(0)">Choose forecast </a><a class="read_more" href="Javascript:void(0)">Real time data </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end slider section -->
+    <!-- forecasts -->
+    <div class="wallet">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="images/wa1.svg" alt="#"/></i>
+                        <h3>FREE FORECASTS</h3>
+                        <p>It is a long established fact that a reader will be distracted by </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="images/wa2.svg" alt="#"/></i>
+                        <h3>MY FORECASTS</h3>
+                        <p>It is a long established fact that a reader will be distracted by </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="images/wa3.svg" alt="#"/></i>
+                        <h3>ACTIVE FORECASTS</h3>
+                        <p>It is a long established fact that a reader will be distracted by </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="images/wa4.svg" alt="#"/></i>
+                        <h3>EXPIRED FORECASTS</h3>
+                        <p>It is a long established fact that a reader will be distracted by </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end forecasts -->
+    <!-- about -->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about_border">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="titlepage text_align_left">
+                                    <h2>About Us</h2>
+                                </div>
+                                <div class="about_text">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quia porro unde voluptatem delectus accusantium laudantium non, eaque ullam blanditiis saepe, necessitatibus aut amet iure libero asperiores reprehenderit provident velit.</p>
+                                    <a class="read_more" href="about.html">Read More</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about_img">
+                                    <figure><img class="img_responsive" src="images/about.jpg" alt="#" /></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about -->
+    <!-- graf -->
+    <div class="graf">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs md-tabs graf_tab" id="myTabMD" role="tablist">
+                        <li>
+                            <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#tab1" role="tab" aria-controls="home-md" aria-selected="true">EUR/USD</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#tab2" role="tab" aria-controls="profile-md" aria-selected="false">GOLD</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab3" role="tab" aria-controls="contact-md" aria-selected="false">DAX</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab4" role="tab" aria-controls="contact-md" aria-selected="false">DOW JONES</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab5" role="tab" aria-controls="contact-md" aria-selected="false">NASDAQ</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content card  graf_content" id="myTabContentMD">
+                        <div class="tab-pane fade show active padi" id="tab1" role="tabpanel" aria-labelledby="home-tab-md">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4><span>EUR/USD</span> 1.2345 <br> Last Price </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>EUR/USD 0.1234 <br> Daily Change </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>EUR/USD 1.2345 <br> 24 Hour Low </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>EUR/USD 1.2345 <br> 24 Hour High </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>EUR/USD 1.2345 <br> Today Open </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4> 12345 <br> 24 hour volume </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="graf_bootom">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <figure>
+                                                <h3 class="h3tota">Total Growth</h3>
+                                                <img class="img_responsive" src="images/graf1.jpg" alt="#" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <h3>LiveTrades <span style="color: #face34;" class="pa_ri">EUR/USD 1.2345</span></h3>
+                                            <figure><img class="img_responsive" src="images/graf2.jpg" alt="#" /></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade padi" id="tab2" role="tabpanel" aria-labelledby="profile-tab-md">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4><span>GOLD</span> 1234.56 <br> Last Price </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>GOLD 1234.56 <br> Daily Change </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>GOLD 1234.56 <br> 24 Hour Low </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>GOLD 1234.56 <br> 24 Hour High </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>GOLD 1234.56 <br> Today Open </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4> 12345 <br> 24 hour volume </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="graf_bootom">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <figure>
+                                                <h3 class="h3tota">Total Growth</h3>
+                                                <img class="img_responsive" src="images/graf1.jpg" alt="#" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <h3>LiveTrades <span style="color: #face34;" class="pa_ri">GOLD 1234.56</span></h3>
+                                            <figure><img class="img_responsive" src="images/graf2.jpg" alt="#" /></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade padi" id="tab3" role="tabpanel" aria-labelledby="contact-tab-md">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4><span>DAX</span> 12345.67 <br> Last Price </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>DAX 12345.67 <br> Daily Change </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>DAX 12345.67 <br> 24 Hour Low </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>DAX 12345.67 <br> 24 Hour High </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>DAX 12345.67 <br> Today Open </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4> 12345 <br> 24 hour volume </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="graf_bootom">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <figure>
+                                                <h3 class="h3tota">Total Growth</h3>
+                                                <img class="img_responsive" src="images/graf1.jpg" alt="#" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <h3>LiveTrades <span style="color: #face34;" class="pa_ri">DAX 12345.67</span></h3>
+                                            <figure><img class="img_responsive" src="images/graf2.jpg" alt="#" /></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade padi" id="tab4" role="tabpanel" aria-labelledby="contact-tab-md">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4><span>DOW JONES</span> 12345.67 <br> Last Price </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>DOW JONES 12345.67 <br> Daily Change </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>DOW JONES 12345.67 <br> 24 Hour Low </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>DOW JONES 12345.67 <br> 24 Hour High </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>DOW JONES 12345.67 <br> Today Open </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4> 12345 <br> 24 hour volume </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="graf_bootom">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <figure>
+                                                <h3 class="h3tota">Total Growth</h3>
+                                                <img class="img_responsive" src="images/graf1.jpg" alt="#" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <h3>LiveTrades <span style="color: #face34;" class="pa_ri">DOW JONES 12345.67</span></h3>
+                                            <figure><img class="img_responsive" src="images/graf2.jpg" alt="#" /></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade padi" id="tab5" role="tabpanel" aria-labelledby="contact-tab-md">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4><span>NASDAQ</span> 12345.67 <br> Last Price </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>NASDAQ 12345.67 <br> Daily Change </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>NASDAQ 12345.67 <br> 24 Hour Low </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>NASDAQ 12345.67 <br> 24 Hour High </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4>NASDAQ 12345.67 <br> Today Open </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="usd text_align_center">
+                                        <h4> 12345 <br> 24 hour volume </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="graf_bootom">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <figure>
+                                                <h3 class="h3tota">Total Growth</h3>
+                                                <img class="img_responsive" src="images/graf1.jpg" alt="#" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <h3>LiveTrades <span style="color: #face34;" class="pa_ri">NASDAQ 12345.67</span></h3>
+                                            <figure><img class="img_responsive" src="images/graf2.jpg" alt="#" /></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end graf -->
+    <!-- testimonial -->
+    <div class="testimonial">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="border_testi">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="titlepage text_align_center">
+                                    <h2>Testimonial</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d_flex">
+                            <div class="col-md-10 offset-md-1">
+                                <div id="testimo" class="carousel slide our_testimonial" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#testimo" data-slide-to="0" class="active"></li>
+                                        <li data-target="#testimo" data-slide-to="1"></li>
+                                        <li data-target="#testimo" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="container">
+                                                <div class="carousel-caption posi_in">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="testomoniam_text text_align_center">
+                                                                <i><img src="images/clint.jpg" alt="#"/></i>
+                                                                <h3>DAX</h3>
+                                                                <span>Short</span>
+                                                                <img src="images/icon.png" alt="#" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="testomoniam_text text_align_left">
+                                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eos cum officia deleniti, cumque reprehenderit fugiat? Dolore asperiores excepturi eius accusantium eum repellendus labore, adipisci, cupiditate, modi necessitatibus tenetur error. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eos assumenda, culpa at architecto id facilis facere voluptatem odio temporibus, perspiciatis, aliquid nostrum quasi.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="container">
+                                                <div class="carousel-caption posi_in">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="testomoniam_text text_align_center">
+                                                                <i><img src="images/clint.jpg" alt="#"/></i>
+                                                                <h3>Dow Jones</h3>
+                                                                <span>Short</span>
+                                                                <img src="images/icon.png" alt="#" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="testomoniam_text text_align_left">
+                                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eos cum officia deleniti, cumque reprehenderit fugiat? Dolore asperiores excepturi eius accusantium eum repellendus labore, adipisci, cupiditate, modi necessitatibus tenetur error. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eos assumenda, culpa at architecto id facilis facere voluptatem odio temporibus, perspiciatis, aliquid nostrum quasi.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="container">
+                                                <div class="carousel-caption posi_in">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="testomoniam_text text_align_center">
+                                                                <i><img src="images/clint.jpg" alt="#"/></i>
+                                                                <h3>Nasdaq</h3>
+                                                                <span>Short</span>
+                                                                <img src="images/icon.png" alt="#" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="testomoniam_text text_align_left">
+                                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eos cum officia deleniti, cumque reprehenderit fugiat? Dolore asperiores excepturi eius accusantium eum repellendus labore, adipisci, cupiditate, modi necessitatibus tenetur error. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eos assumenda, culpa at architecto id facilis facere voluptatem odio temporibus, perspiciatis, aliquid nostrum quasi.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#testimo" role="button" data-slide="prev">
+                                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#testimo" role="button" data-slide="next">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end testimonial -->
+    <!-- works -->
+    <div class="works">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center">
+                        <h2>How It Works</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="works_vedio">
+                        <figure><img class="img_responsive" src="images/work.png" alt="#"></figure>
+                        <!-- <a href="https://www.youtube.com/watch?v=5iEHsRja8u0" target="_blank">What is Forex</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- works -->
+    <!-- contact -->
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center">
+                        <h2>Requeste A call Back</h2>
+                    </div>
+                </div>
+                <div class=" col-md-10 offset-md-1">
+                    <form id="request" class="main_form">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="contactus" placeholder="Email" type="type" name="Email">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="contactus" placeholder="Phone number" type="type" name="Phone number">
+                            </div>
+                            <div class="col-md-6">
+                                <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button class="send_btn">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end contact -->
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="logo_bottom" href="index.html">Forex Bet</a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" ">
+                  <div class="Informa conta ">
+                     <h3>Contact Us</h3>
+                     <ul>
+                        <li> <a href="Javascript:void(0) "> <i class="fa fa-map-marker " aria-hidden="true "></i> Location
+                           </a>
+                        </li>
+                        <li> <a href="Javascript:void(0) "><i class="fa fa-phone " aria-hidden="true "></i> Call +01 1234567890
+                           </a>
+                        </li>
+                        <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i> demo@gmail.com
+                           </a>
+                        </li>
+                     </ul>
+                     <ul>
+                        <li>Readable content of                              
+                        </li>
+                        <li>a page when looking                           
+                        </li>
+                        <li>at its layoutreadable                          
+                        </li>
+                        <li>content of a page                             
+                        </li>
+                        <li>when looking at its                         
+                        </li>
+                        <li>layout                          
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 "">
+                        <div class="Informa helpful">
+                            <h3>Useful Link</h3>
+                            <ul>
+                                <li>Readable content of
+                                </li>
+                                <li>a page when looking
+                                </li>
+                                <li>at its layoutreadable
+                                </li>
+                                <li>content of a page
+                                </li>
+                                <li>when looking at its
+                                </li>
+                                <li>layout
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" ">
+                  <div class="Informa ">
+                     <h3>Offices</h3>
+                     <ul>
+                        <li>Readable content of                              
+                        </li>
+                        <li>a page when looking                           
+                        </li>
+                        <li>at its layoutreadable                          
+                        </li>
+                        <li>content of a page                             
+                        </li>
+                        <li>when looking at its                         
+                        </li>
+                        <li>layout                          
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 ">
+                  <div class="Informa ">
+                     <h3>Newsletter</h3>
+                     <form class="newslatter_form ">
+                        <input class="ente " placeholder="Enter your email " type="text " name="Enter your email ">
+                        <button class="subs_btn ">Subscribe</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright text_align_center ">
+               <div class="container ">
+                  <div class="row ">
+                     <div class="col-md-12 ">
+                        <p>© 2023 All Rights Reserved. Design by Georgi Petrov</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js "></script>
+      <script src="js/bootstrap.bundle.min.js "></script>
+      <script src="js/jquery-3.0.0.min.js "></script>
+      <script src="js/custom.js "></script>
+   </body>
+</html>
