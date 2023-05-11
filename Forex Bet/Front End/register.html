@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Forex Bet</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- awesome fontfamily -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="" /></div>
+      </div>
+      <!-- end loader -->
+      <div id="mySidepanel" class="sidepanel">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+         <a href="index.html">Home</a>
+         <a class="active" href="register.html">Register</a>
+         <a href="login.html">Login</a>
+         <a href="about.html">About</a>
+         <a href="forecast.html">Forecasts</a>
+         <a href="testimonial.html">Testimonial</a>
+         <a href="contact.html">Contact</a>
+      </div>
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="head-top">
+            <div class="container-fluid">
+               <div class="row d_flex">
+                  <div class="col-sm-3">
+                     <div class="logo">
+                        <a href="index.html">Forex Bet</a>
+                     </div>
+                  </div>
+                  <div class="col-sm-5">
+                     <ul class="social_icon text_align_right d_none">
+                        <li> <a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
+                        <li> <a href="Javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                        <li> <a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li> <a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li> <a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+                  <div class="col-sm-4">
+                     <ul class="email text_align_right">
+                        <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                        <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li>
+                        <li> <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header -->
+      <!-- works -->
+      <div class="works">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>Register</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="works_vedio">
+                     <form th:action="@{/users/register}" th:method="post" th:object="${userRegisterDTO}">
+                        <div class="container">
+                    
+                            <div th:if="${#fields.hasGlobalErrors()}">
+                                <p th:each="err : ${#fields.globalErrors()}" th:text="${err}" class="errors alert alert-danger" />
+                            </div>
+                    
+                            <hr>
+                            <div>
+                                <label th:for="email"><b>Email</b></label>
+                                <input th:field="*{email}"
+                                       type="text" placeholder="Enter valid email" name="email" id="email">
+                    
+                                <p th:each="error : ${#fields.errors('email')}" th:text="${error}"
+                                   class="errors alert alert-danger">
+                                    Valid email is required
+                                </p>
+                    
+                            </div>
+                            <div>
+                                <label th:for="first-name"><b>First name</b></label>
+                                <input th:field="*{firstName}"
+                                       type="text" placeholder="First name must be between 2 and 20 characters" name="first-name"
+                                       id="first-name">
+                    
+                                <p th:each="error : ${#fields.errors('firstName')}" th:text="${error}"
+                                   class="errors alert alert-danger">
+                                    First name is required.
+                                </p>
+                            </div>
+                            <div>
+                                <label th:for="last-name"><b>Last name</b></label>
+                                <input th:field="*{lastName}"
+                                       type="text" placeholder="Last name must be between 2 and 20 characters" name="last-name"
+                                       id="last-name">
+                    
+                                <p th:each="error : ${#fields.errors('lastName')}" th:text="${error}"
+                                   class="errors alert alert-danger">
+                                    Last name is required.
+                                </p>
+                            </div>
+                            <div>
+                                <label for="username"><b>Username</b></label>
+                                <input th:field="*{username}"
+                                       type="text" placeholder="Username must be between 3 and 20 characters" name="username"
+                                       id="username">
+                    
+                                <p th:each="error : ${#fields.errors('username')}" th:text="${error}"
+                                   class="errors alert alert-danger">
+                                    Username is required.
+                                </p>
+                    
+                            </div>
+                            <div>
+                                <label for="password"><b>Password</b></label>
+                                <input th:field="*{password}"
+                                       type="password" placeholder="Password must be between 5 and 20 characters" name="password"
+                                       id="password">
+                    
+                                <p th:each="error : ${#fields.errors('password')}" th:text="${error}"
+                                   class="errors alert alert-danger">
+                                    Password is required.
+                                </p>
+                            </div>
+                            <div>
+                                <label for="password-repeat"><b>Confirm Password</b></label>
+                                <input th:field="*{confirmPassword}"
+                                       type="password" placeholder="Repeat your password"
+                                       name="password-repeat" id="password-repeat">
+                    
+                                <p th:each="error : ${#fields.errors('confirmPassword')}" th:text="${error}"
+                                   class="errors alert alert-danger">
+                                    Passwords does not match.
+                                </p>
+                            </div>
+                    
+                            <hr>
+                    
+                            <button type="submit" class="registerbtn">Register</button>
+                        </div>
+                    
+                        <div class="container signin">
+                            <p>Already have an account? <a th:href="@{/users/login}">Sign in</a>.</p>
+                        </div>
+                    </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- works -->
+      <!-- footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <a class="logo_bottom" href="index.html">Forex Bet</a>
+                  </div>
+                  <div class="col-md-3 col-sm-6"">
+                     <div class="Informa conta">
+                        <h3>Contact Us</h3>
+                        <ul>
+                           <li> <a href="Javascript:void(0)"> <i class="fa fa-map-marker" aria-hidden="true"></i> Location
+                              </a>
+                           </li>
+                           <li> <a href="Javascript:void(0)"><i class="fa fa-phone" aria-hidden="true"></i> Call +01 1234567890
+                              </a>
+                           </li>
+                           <li> <a href="Javascript:void(0)"> <i class="fa fa-envelope" aria-hidden="true"></i> demo@gmail.com
+                              </a>
+                           </li>
+                        </ul>
+                        <ul>
+                           <li>Readable content of                              
+                           </li>
+                           <li>a page when looking                           
+                           </li>
+                           <li>at its layoutreadable                          
+                           </li>
+                           <li>content of a page                             
+                           </li>
+                           <li>when looking at its                         
+                           </li>
+                           <li>layout                          
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6"">
+                     <div class="Informa helpful">
+                        <h3>Useful Link</h3>
+                        <ul>
+                           <li>Readable content of                              
+                           </li>
+                           <li>a page when looking                           
+                           </li>
+                           <li>at its layoutreadable                          
+                           </li>
+                           <li>content of a page                             
+                           </li>
+                           <li>when looking at its                         
+                           </li>
+                           <li>layout                          
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6"">
+                     <div class="Informa">
+                        <h3>Offices</h3>
+                        <ul>
+                           <li>Readable content of                              
+                           </li>
+                           <li>a page when looking                           
+                           </li>
+                           <li>at its layoutreadable                          
+                           </li>
+                           <li>content of a page                             
+                           </li>
+                           <li>when looking at its                         
+                           </li>
+                           <li>layout                          
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                     <div class="Informa">
+                        <h3>Newsletter</h3>
+                        <form class="newslatter_form">
+                           <input class="ente" placeholder="Enter your email" type="text" name="Enter your email">
+                           <button class="subs_btn">Subscribe</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="copyright text_align_center">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <p>© 2023 All Rights Reserved. Design by Georgi Petrov</a></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
