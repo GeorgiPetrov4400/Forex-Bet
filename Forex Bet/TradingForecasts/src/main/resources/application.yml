@@ -15,7 +15,7 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
     password: ${DB_Password}
     username: ${DB_Username}
-    url: jdbc:mysql://localhost:3306/trading_forecasts?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/forex_bet?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
   servlet:
     multipart:
       max-request-size: 1MB
