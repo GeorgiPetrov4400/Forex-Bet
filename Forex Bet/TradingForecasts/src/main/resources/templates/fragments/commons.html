@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Forecasts</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/images/favicon.png}">
+    <link rel="stylesheet" th:href="@{/css/admin-style.css}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<nav>
+    <ul class="nav">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li sec:authorize="isAuthenticated()">
+            <a th:href="@{/my-account}">My Account</a>
+        </li>
+        <li sec:authorize="isAnonymous()">
+            <a th:href="@{/users/register}">Register</a>
+        </li>
+        <li sec:authorize="isAnonymous()">
+            <a th:href="@{/users/login}">Login</a>
+        </li>
+        <li sec:authorize="hasRole('Admin')">
+            <a th:href="@{/forecasts/add}">Add Forecast</a>
+        </li>
+        <li sec:authorize="isAuthenticated()">
+            <a th:href="@{/orders/order}">My Orders</a>
+        </li>
+        <li>
+            <a th:href="@{/forecasts/ui}">Free Forecast</a>
+        </li>
+        <li sec:authorize="isAuthenticated()">
+            <a th:href="@{/contact}">Contact Us</a>
+        </li>
+        <li>
+            <a th:href="@{/about}">About Us</a>
+        </li>
+        <li class="welcome" sec:authorize="isAuthenticated()">
+            Welcome,
+            <th:block sec:authentication="name"></th:block>!
+        </li>
+        <li>
+            <form th:action="@{/users/logout}" sec:authorize="isAuthenticated()" th:method="post">
+                <input class="button" type="submit" value="Logout">
+            </form>
+        </li>
+    </ul>
+</nav>
+
+<footer>
+    <p>© Trading Forecasts 2023. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: 'TRUE'
+    hibernate:
+      ddl-auto: update
+    open-in-view: 'false'
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: 'true'
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: ${DB_Password}
+    username: ${DB_Username}
+    url: jdbc:mysql://localhost:3306/trading_forecasts?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+  servlet:
+    multipart:
+      max-request-size: 1MB
+      max-file-size: 1MB
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor: TRACE
+        SQL: DEBUG
+      nodeValue: WARN
+    blog: WARN
+
+#application:
+#  Admin:
+#    admin-pass: ${DEFAULT_PASS_ADMIN}
+#  Moderator:
+#    moderator-pass: ${DEFAULT_PASS_MODERATOR}
+
+cloudinary:
+  api-key: ${Cloudinary_api_key}
+  api-secret: ${Cloudinary_api_secret}
+  cloud-name: ${Cloudinary_name}

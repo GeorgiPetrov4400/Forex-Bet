@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/images/favicon.png}">
+    <link rel="stylesheet" th:href="@{/css/my-account-style.css}">
+</head>
+
+<body>
+<nav th:replace="~{fragments/commons::nav}"></nav>
+
+<main>
+    <form th:action="@{/my-account}" th:method="patch" th:object="${changeAccountUsernameDTO}"
+          class="mx-auto w-25 bg-blur rounded">
+
+        <div class="form-group">
+            <div th:if="${#fields.hasGlobalErrors()}">
+                <p th:each="err : ${#fields.globalErrors()}" th:text="${err}" class="errors alert alert-danger" />
+            </div>
+
+            <div class="username">
+                <label for="username" class="username">Enter new username</label>
+            </div>
+            <div>
+                <input th:field="*{username}" id="username" name="username" type="text" placeholder="Username">
+            </div>
+
+            <p th:each="error : ${#fields.errors('username')}" th:text="${error}"
+               class="errors">
+                Valid username is required
+            </p>
+        </div>
+
+        <div class="button">
+            <button type="submit" class="button-change">Change Username</button>
+        </div>
+
+    </form>
+</main>
+
+<footer th:replace="~{fragments/commons::footer}"></footer>
+
+</body>
+
+</html>
