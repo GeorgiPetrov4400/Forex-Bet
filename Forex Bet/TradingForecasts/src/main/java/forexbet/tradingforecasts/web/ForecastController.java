@@ -52,25 +52,6 @@ public class ForecastController {
         return "eur-usd-forecast";
     }
 
-    @GetMapping("/eur-gbp-forecast")
-    public String forecastEurGbp(Model model) {
-        Category byCategoryNameEnum = categoryService.findByCategoryNameEnum(CategoryNameEnum.EurGbp);
-
-        List<ForecastViewModel> allActiveEurGbpForecasts =
-                forecastService.getActiveForecastsByCategory(byCategoryNameEnum);
-
-        addForecastPicture(allActiveEurGbpForecasts);
-        model.addAttribute("allActiveEurGbpForecasts", allActiveEurGbpForecasts);
-
-        List<ForecastViewModel> allExpiredEurGbpForecast =
-                forecastService.getAllExpiredForecastsByCategory(byCategoryNameEnum);
-
-        addForecastPicture(allExpiredEurGbpForecast);
-        model.addAttribute("allExpiredEurGbpForecast", allExpiredEurGbpForecast);
-
-        return "eur-gbp-forecast";
-    }
-
     @GetMapping("/gold-forecast")
     public String forecastGold(Model model) {
         Category byCategoryNameEnum = categoryService.findByCategoryNameEnum(CategoryNameEnum.Gold);
