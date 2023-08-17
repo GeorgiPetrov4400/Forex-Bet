@@ -93,13 +93,13 @@
                   <form th:action="@{/users/login}" th:method="post">
 
                      <div class="container">
-                        <div if="${param.error}" class="alert alert-danger">
+                        <div th:if="${param.error}" class="alert alert-danger">
                            <strong>Wrong username or password!</strong>
                         </div>
 
                         <div>
                            <label for="username"><b>Username</b></label>
-                           <input value="${username}" id="username" name="username" type="text"
+                           <input th:value="${username}" id="username" name="username" type="text"
                               placeholder="Enter your username" required minlength="3" maxlength="20">
                         </div>
 
@@ -107,9 +107,9 @@
                            <label for="password"><b>Password</b></label>
                            <input type="password" placeholder="Enter your password" id="password" name="password"
                               required minlength="5" maxlength="20">
-                           <small class="text-danger" if="${bad_credentials}">Invalid username or password!</small>
+                           <small class="text-danger" th:if="${bad_credentials}">Invalid username or password!</small>
 
-                           <div class="container register" if="${bad_credentials}">
+                           <div class="container register" th:if="${bad_credentials}">
                               <p>Create new account? <a class="register" href="register.html">Register</a>.</p>
                            </div>
                         </div>
@@ -150,10 +150,10 @@
    </footer>
    <!-- end footer -->
    <!-- Javascript files-->
-   <script src="js/jquery.min.js"></script>
-   <script src="js/bootstrap.bundle.min.js"></script>
-   <script src="js/jquery-3.0.0.min.js"></script>
-   <script src="js/custom.js"></script>
+   <script th:src="@{/js/jquery.min.js}"></script>
+   <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+   <script th:src="@{/js/jquery-3.0.0.min.js}"></script>
+   <script th:src="@{/js/custom.js}"></script>
 </body>
 
 </html>
