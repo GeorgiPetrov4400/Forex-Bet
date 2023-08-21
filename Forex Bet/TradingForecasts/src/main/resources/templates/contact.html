@@ -32,7 +32,7 @@
 <body class="main-layout inner_page">
     <!-- loader  -->
     <div class="loader_bg">
-        <div class="loader"><img src="images/loading.gif" alt="" /></div>
+        <div class="loader"><img th:src="@{/images/loading.gif}" alt="" /></div>
     </div>
     <!-- end loader -->
     <div id="mySidepanel" class="sidepanel">
@@ -71,7 +71,7 @@
                             <li class="d_none"> <a href="login.html"><i class="fa fa-user" style="cursor: pointer;"
                                         aria-hidden="true"></i></a> </li>
                             <li>
-                                <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button>
+                                <button class="openbtn" onclick="openNav()"><img th:src="@{/images/menu_btn.png}"></button>
                             </li>
                         </ul>
                     </div>
@@ -197,9 +197,9 @@
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src=" js/jquery.min.js "></script>
-      <script src=" js/bootstrap.bundle.min.js "></script>
-      <script src=" js/jquery-3.0.0.min.js "></script>
-      <script src=" js/custom.js "></script>
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/jquery-3.0.0.min.js}"></script>
+    <script th:src="@{/js/custom.js}"></script>
    </body>
 </html>
