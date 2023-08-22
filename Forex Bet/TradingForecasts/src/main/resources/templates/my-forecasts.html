@@ -30,214 +30,214 @@
 <!-- body -->
 
 <body class="main-layout">
-    <!-- loader  -->
-    <div class="loader_bg">
-        <div class="loader"><img th:src="@{/images/loading.gif}" alt="" /></div>
-    </div>
-    <!-- end loader -->
-    <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a class="active" href="index.html">Home</a>
-        <a href="register.html">Register</a>
-        <a href="login.html">Login</a>
-        <a href="about.html">About</a>
-        <a href="forecast.html">Forecasts</a>
-        <a href="testimonial.html">Testimonial</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <!-- header -->
-    <header>
-        <!-- header inner -->
-        <div class="head-top">
-            <div class="container-fluid">
-                <div class="row d_flex">
-                    <div class="col-sm-3">
-                        <div class="logo">
-                            <a href="index.html">Forex Bet</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-5">
-                        <ul class="social_icon text_align_right d_none">
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4">
-                        <ul class="email text_align_right">
-                            <li class="d_none"><a href="register.html"><i class="fa fa-registered"
-                                        aria-hidden="true"></i></a></li>
-                            <li class="d_none"> <a href="login.html"><i class="fa fa-user"
-                                        style="cursor: pointer;" aria-hidden="true"></i></a> </li>
-                            <li>
-                                <button class="openbtn" onclick="openNav()"><img th:src="@{/images/menu_btn.png}"></button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- end header -->
-    <!-- forecasts -->
-    <div class="wallet">
+<!-- loader  -->
+<div class="loader_bg">
+    <div class="loader"><img th:src="@{/images/loading.gif}" alt=""/></div>
+</div>
+<!-- end loader -->
+<div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a class="active" href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="about.html">About</a>
+    <a href="forecast.html">Forecasts</a>
+    <a href="testimonial.html">Testimonial</a>
+    <a href="contact.html">Contact</a>
+</div>
+<!-- header -->
+<header>
+    <!-- header inner -->
+    <div class="head-top">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div id="wa_hover" class="wallet_box text_align_center">
-                        <i><img th:src="@{/images/wa1.svg}" alt="#" /></i>
-                        <h3>FREE FORECASTS</h3>
-                        <p><a href="free-forecasts.html">Check all active free forecasts</a>  </p>
+            <div class="row d_flex">
+                <div class="col-sm-3">
+                    <div class="logo">
+                        <a href="index.html">Forex Bet</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div id="wa_hover" class="wallet_box text_align_center">
-                        <i><img th:src="@{/images/wa2.svg}" alt="#" /></i>
-                        <h3>MY FORECASTS</h3>
-                        <p><a href="my-forecasts.html">Check your bought forecasts</a></p>
-                    </div>
+                <div class="col-sm-5">
+                    <ul class="social_icon text_align_right d_none">
+                        <li><a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div id="wa_hover" class="wallet_box text_align_center">
-                        <i><img th:src="@{/images/wa3.svg}" alt="#" /></i>
-                        <h3>ACTIVE FORECASTS</h3>
-                        <p><a href="active-forecasts.html">Check all active forecasts</a></p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div id="wa_hover" class="wallet_box text_align_center">
-                        <i><img th:src="@{/images/wa4.svg}" alt="#" /></i>
-                        <h3>EXPIRED FORECASTS</h3>
-                        <p><a href="expired-forecasts.html">Check all expired forecasts</a></p>
-                    </div>
+                <div class="col-sm-4">
+                    <ul class="email text_align_right">
+                        <li class="d_none"><a href="register.html"><i class="fa fa-registered"
+                                                                      aria-hidden="true"></i></a></li>
+                        <li class="d_none"><a href="login.html"><i class="fa fa-user"
+                                                                   style="cursor: pointer;" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <button class="openbtn" onclick="openNav()"><img th:src="@{/images/menu_btn.png}"></button>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end forecasts -->
-    <!-- testimonial -->
-    <div class="testimonial">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="border_testi">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="titlepage text_align_center">
-                                    <h2>My Forecasts</h2>
-                                </div>
+</header>
+<!-- end header -->
+<!-- forecasts -->
+<div class="wallet">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div id="wa_hover" class="wallet_box text_align_center">
+                    <i><img th:src="@{/images/wa1.svg}" alt="#"/></i>
+                    <h3>FREE FORECASTS</h3>
+                    <p><a href="free-forecasts.html">Check all active free forecasts</a></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div id="wa_hover" class="wallet_box text_align_center">
+                    <i><img th:src="@{/images/wa2.svg}" alt="#"/></i>
+                    <h3>MY FORECASTS</h3>
+                    <p><a href="my-forecasts.html">Check your bought forecasts</a></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div id="wa_hover" class="wallet_box text_align_center">
+                    <i><img th:src="@{/images/wa3.svg}" alt="#"/></i>
+                    <h3>ACTIVE FORECASTS</h3>
+                    <p><a href="active-forecasts.html">Check all active forecasts</a></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div id="wa_hover" class="wallet_box text_align_center">
+                    <i><img th:src="@{/images/wa4.svg}" alt="#"/></i>
+                    <h3>EXPIRED FORECASTS</h3>
+                    <p><a href="expired-forecasts.html">Check all expired forecasts</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end forecasts -->
+<!-- testimonial -->
+<div class="testimonial">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="border_testi">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="titlepage text_align_center">
+                                <h2>My Forecasts</h2>
                             </div>
                         </div>
-                        <div class="row d_flex">
-                            <div class="col-md-10 offset-md-1">
-                                <div id="testimo" class="carousel slide our_testimonial" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#testimo" data-slide-to="0" class="active"></li>
-                                        <li data-target="#testimo" data-slide-to="1"></li>
-                                        <li data-target="#testimo" data-slide-to="2"></li>
-                                    </ol>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="container">
-                                                <div class="carousel-caption posi_in">
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <div class="testomoniam_text text_align_center">
-                                                                <i><img th:src="@{/images/dax.PNG}" alt="#" /></i>
-                                                                <h3>DAX</h3>
-                                                                <span>Short</span>
-                                                                <img th:src="@{/images/icon.png}" alt="#" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <div class="testomoniam_text text_align_left">
-                                                                <p>Препоръчваме къса позиция при DAX за 11111.
-                                                                    <hr>
-                                                                    Внимание !!!
-                                                                    Бъдете предпазливи при откриването на всяка поръчка
-                                                                    на FOREX пазара и я съобразявайте с марджин
-                                                                    изискванията на брокера Ви.
-                                                                    Имайте предвид, че прекомерният риск и големите
-                                                                    позиции, които откривате, могат да доведат до
-                                                                    автоматично затваряне и нулиране на вашия акаунт.
-                                                                </p>
-                                                            </div>
+                    </div>
+                    <div class="row d_flex">
+                        <div class="col-md-10 offset-md-1">
+                            <div id="testimo" class="carousel slide our_testimonial" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#testimo" data-slide-to="0" class="active"></li>
+                                    <li data-target="#testimo" data-slide-to="1"></li>
+                                    <li data-target="#testimo" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="container">
+                                            <div class="carousel-caption posi_in">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="testomoniam_text text_align_center">
+                                                            <i><img th:src="@{/images/dax.PNG}" alt="#"/></i>
+                                                            <h3>DAX</h3>
+                                                            <span>Short</span>
+                                                            <img th:src="@{/images/icon.png}" alt="#"/>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="container">
-                                                <div class="carousel-caption posi_in">
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <div class="testomoniam_text text_align_center">
-                                                                <i><img th:src="@{/images/dow.PNG}" alt="#" /></i>
-                                                                <h3>Dow Jones</h3>
-                                                                <span>Short</span>
-                                                                <img th:src="@{/images/icon.png}" alt="#" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <div class="testomoniam_text text_align_left">
-                                                                <p>Препоръчваме къса позиция при Dow Jones за 32000.
-                                                                    <hr>
-                                                                    Внимание !!!
-                                                                    Бъдете предпазливи при откриването на всяка поръчка
-                                                                    на FOREX пазара и я съобразявайте с марджин
-                                                                    изискванията на брокера Ви.
-                                                                    Имайте предвид, че прекомерният риск и големите
-                                                                    позиции, които откривате, могат да доведат до
-                                                                    автоматично затваряне и нулиране на вашия акаунт.
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="container">
-                                                <div class="carousel-caption posi_in">
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <div class="testomoniam_text text_align_center">
-                                                                <i><img th:src="@{/images/nasdaq.PNG}" alt="#" /></i>
-                                                                <h3>Nasdaq</h3>
-                                                                <span>Short</span>
-                                                                <img th:src="@{/images/icon.png}" alt="#" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <div class="testomoniam_text text_align_left">
-                                                                <p>Препоръчваме къса позиция при NASDAQ за 10000.
-                                                                    <hr>
-                                                                    Внимание !!!
-                                                                    Бъдете предпазливи при откриването на всяка поръчка
-                                                                    на FOREX пазара и я съобразявайте с марджин
-                                                                    изискванията на брокера Ви.
-                                                                    Имайте предвид, че прекомерният риск и големите
-                                                                    позиции, които откривате, могат да доведат до
-                                                                    автоматично затваряне и нулиране на вашия акаунт.
-                                                                </p>
-                                                            </div>
+                                                    <div class="col-md-9">
+                                                        <div class="testomoniam_text text_align_left">
+                                                            <p>Препоръчваме къса позиция при DAX за 11111.
+                                                            <hr>
+                                                            Внимание !!!
+                                                            Бъдете предпазливи при откриването на всяка поръчка
+                                                            на FOREX пазара и я съобразявайте с марджин
+                                                            изискванията на брокера Ви.
+                                                            Имайте предвид, че прекомерният риск и големите
+                                                            позиции, които откривате, могат да доведат до
+                                                            автоматично затваряне и нулиране на вашия акаунт.
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="carousel-control-prev" href="#testimo" role="button" data-slide="prev">
-                                        <i class="fa fa-angle-left" aria-hidden="true"></i>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#testimo" role="button" data-slide="next">
-                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                        <span class="sr-only">Next</span>
-                                    </a>
+                                    <div class="carousel-item">
+                                        <div class="container">
+                                            <div class="carousel-caption posi_in">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="testomoniam_text text_align_center">
+                                                            <i><img th:src="@{/images/dow.PNG}" alt="#"/></i>
+                                                            <h3>Dow Jones</h3>
+                                                            <span>Short</span>
+                                                            <img th:src="@{/images/icon.png}" alt="#"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="testomoniam_text text_align_left">
+                                                            <p>Препоръчваме къса позиция при Dow Jones за 32000.
+                                                            <hr>
+                                                            Внимание !!!
+                                                            Бъдете предпазливи при откриването на всяка поръчка
+                                                            на FOREX пазара и я съобразявайте с марджин
+                                                            изискванията на брокера Ви.
+                                                            Имайте предвид, че прекомерният риск и големите
+                                                            позиции, които откривате, могат да доведат до
+                                                            автоматично затваряне и нулиране на вашия акаунт.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container">
+                                            <div class="carousel-caption posi_in">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="testomoniam_text text_align_center">
+                                                            <i><img th:src="@{/images/nasdaq.PNG}" alt="#"/></i>
+                                                            <h3>Nasdaq</h3>
+                                                            <span>Short</span>
+                                                            <img th:src="@{/images/icon.png}" alt="#"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="testomoniam_text text_align_left">
+                                                            <p>Препоръчваме къса позиция при NASDAQ за 10000.
+                                                            <hr>
+                                                            Внимание !!!
+                                                            Бъдете предпазливи при откриването на всяка поръчка
+                                                            на FOREX пазара и я съобразявайте с марджин
+                                                            изискванията на брокера Ви.
+                                                            Имайте предвид, че прекомерният риск и големите
+                                                            позиции, които откривате, могат да доведат до
+                                                            автоматично затваряне и нулиране на вашия акаунт.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <a class="carousel-control-prev" href="#testimo" role="button" data-slide="prev">
+                                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#testimo" role="button" data-slide="next">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -245,92 +245,15 @@
             </div>
         </div>
     </div>
-    <!-- end testimonial -->
-    <!-- footer -->
-<!--    <footer>-->
-<!--        <div class="footer">-->
-<!--            <div class="container">-->
-<!--                <div class="row">-->
-<!--                    <div class="col-md-12">-->
-<!--                        <a class="logo_bottom" href="index.html">Forex Bet</a>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-3 col-sm-6" ">-->
-<!--                  <div class=" Informa conta ">-->
-<!--                     <h3>Contact Us</h3>-->
-<!--                     <ul>-->
-<!--                        <li> <a href=" Javascript:void(0) "> <i class=" fa fa-map-marker " aria-hidden=" true "></i> Location-->
-<!--                           </a>-->
-<!--                        </li>-->
-<!--                        <li> <a href=" Javascript:void(0) "><i class=" fa fa-phone " aria-hidden=" true "></i> Call +359 777123456-->
-<!--                           </a>-->
-<!--                        </li>-->
-<!--                        <li> <a href=" Javascript:void(0) "> <i class=" fa fa-envelope " aria-hidden=" true "></i> demo@gmail.com-->
-<!--                           </a>-->
-<!--                        </li>-->
-<!--                     </ul>-->
-<!--                     <ul>-->
-<!--                        <li>You can contact us                              -->
-<!--                        </li>-->
-<!--                        <li>by visit our office,                           -->
-<!--                        </li>-->
-<!--                        <li>call us by phone                          -->
-<!--                        </li>-->
-<!--                        <li> or send us e-mail                             -->
-<!--                        </li>-->
-<!--                     </ul>-->
-<!--                  </div>-->
-<!--               </div>-->
-<!--               <div class=" col-md-3 col-sm-6 "">-->
-<!--                        <div class="Informa helpful">-->
-<!--                            <h3>Useful Link</h3>-->
-<!--                            <ul>-->
-<!--                                <li>Basic Forex trading-->
-<!--                                </li>-->
-<!--                                <li>How to trade Forex-->
-<!--                                </li>-->
-<!--                                <li>Forex signals-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-3 col-sm-6" ">-->
-<!--                  <div class=" Informa ">-->
-<!--                     <h3>Offices</h3>-->
-<!--                     <ul>-->
-<!--                        <li>Office Sofia                              -->
-<!--                        </li>-->
-<!--                        <li>Office Plovdiv                           -->
-<!--                        </li>-->
-<!--                     </ul>-->
-<!--                  </div>-->
-<!--               </div>-->
-<!--               <div class=" col-md-3 col-sm-6 ">-->
-<!--                  <div class=" Informa ">-->
-<!--                     <h3>Newsletter</h3>-->
-<!--                     <form class=" newslatter_form ">-->
-<!--                        <input class=" ente " placeholder=" Enter your email " type=" text " name=" Enter your email ">-->
-<!--                        <button class=" subs_btn ">Subscribe</button>-->
-<!--                     </form>-->
-<!--                  </div>-->
-<!--               </div>-->
-<!--            </div>-->
-<!--            <div class=" copyright text_align_center ">-->
-<!--               <div class=" container ">-->
-<!--                  <div class=" row ">-->
-<!--                     <div class=" col-md-12 ">-->
-<!--                        <p>© 2023 All Rights Reserved. Design by Georgi Petrov</a></p>-->
-<!--                     </div>-->
-<!--                  </div>-->
-<!--               </div>-->
-<!--            </div>-->
-<!--         </div>-->
-<!--      </div>-->
-<!--      </footer>-->
-      <!-- end footer -->
-      <!-- Javascript files-->
-    <script th:src="@{/js/jquery.min.js}"></script>
-    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-    <script th:src="@{/js/jquery-3.0.0.min.js}"></script>
-    <script th:src="@{/js/custom.js}"></script>
-   </body>
+</div>
+<!-- end testimonial -->
+<!-- footer -->
+<footer th:replace="~{fragments/commons::footer}"></footer>
+<!-- end footer -->
+<!-- Javascript files-->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/jquery-3.0.0.min.js}"></script>
+<script th:src="@{/js/custom.js}"></script>
+</body>
 </html>

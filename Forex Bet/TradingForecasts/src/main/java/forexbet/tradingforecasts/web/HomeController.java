@@ -21,6 +21,16 @@ public class HomeController {
         return "about";
     }
 
+    @GetMapping("/forecast")
+    public String forecast() {
+        return "forecast";
+    }
+
+    @GetMapping("/testimonial")
+    public String testimonial() {
+        return "testimonial";
+    }
+
     @GetMapping("/free-forecasts")
     public String freeForecasts() {
         return "free-forecasts";

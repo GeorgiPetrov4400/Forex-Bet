@@ -251,28 +251,28 @@
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="images/wa1.svg" alt="#"/></i>
+                    <i><img th:src="@{/images/wa1.svg}" alt="#"/></i>
                     <h3>FREE FORECASTS</h3>
                     <p><a href="free-forecasts.html">Check all active free forecasts</a></p>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="images/wa2.svg" alt="#"/></i>
+                    <i><img th:src="@{/images/wa2.svg}" alt="#"/></i>
                     <h3>MY FORECASTS</h3>
                     <p><a href="my-forecasts.html">Check your bought forecasts</a></p>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="images/wa3.svg" alt="#"/></i>
+                    <i><img th:src="@{/images/wa3.svg}" alt="#"/></i>
                     <h3>ACTIVE FORECASTS</h3>
                     <p><a href="active-forecasts.html">Check all active forecasts</a></p>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img src="images/wa4.svg" alt="#"/></i>
+                    <i><img th:src="@{/images/wa4.svg}" alt="#"/></i>
                     <h3>EXPIRED FORECASTS</h3>
                     <p><a href="expired-forecasts.html">Check all expired forecasts</a></p>
                 </div>
@@ -303,7 +303,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="about_img">
-                                <figure><img class="img_responsive" src="images/about.jpg" alt="#"/></figure>
+                                <figure><img class="img_responsive" th:src="@{/images/about.jpg}" alt="#"/></figure>
                             </div>
                         </div>
                     </div>
@@ -649,10 +649,10 @@
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <div class="testomoniam_text text_align_center">
-                                                            <i><img src="images/clint.jpg" alt="#"/></i>
+                                                            <i><img th:src="@{/images/clint.jpg}" alt="#"/></i>
                                                             <h3>DAX</h3>
                                                             <span>Short</span>
-                                                            <img src="images/icon.png" alt="#"/>
+                                                            <img th:src="@{/images/icon.png}" alt="#"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-9">
@@ -679,10 +679,10 @@
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <div class="testomoniam_text text_align_center">
-                                                            <i><img src="images/clint.jpg" alt="#"/></i>
+                                                            <i><img th:src="@{/images/clint.jpg}" alt="#"/></i>
                                                             <h3>Dow Jones</h3>
                                                             <span>Short</span>
-                                                            <img src="images/icon.png" alt="#"/>
+                                                            <img th:src="@{/images/icon.png}" alt="#"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-9">
@@ -709,10 +709,10 @@
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <div class="testomoniam_text text_align_center">
-                                                            <i><img src="images/clint.jpg" alt="#"/></i>
+                                                            <i><img th:src="@{/images/clint.jpg}" alt="#"/></i>
                                                             <h3>Nasdaq</h3>
                                                             <span>Short</span>
-                                                            <img src="images/icon.png" alt="#"/>
+                                                            <img th:src="@{/images/icon.png}" alt="#"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-9">
@@ -789,13 +789,13 @@
     </div>
 </div>
 <!-- end contact -->
-<!-- footer -->
+<!-- footer-->
 <!--    <footer>-->
 <!--        <div class="footer">-->
 <!--            <div class="container">-->
 <!--                <div class="row">-->
 <!--                    <div class="col-md-12">-->
-<!--                        <a class="logo_bottom" th:href="index.html">Forex Bet</a>-->
+<!--                        <a class="logo_bottom" href="index.html">Forex Bet</a>-->
 <!--                    </div>-->
 <!--                    <div class="col-md-3 col-sm-6" ">-->
 <!--                  <div class=" Informa conta ">-->
@@ -869,6 +869,9 @@
 <!--         </div>-->
 <!--      </div>-->
 <!--      </footer>-->
+
+<footer th:replace="~{fragments/commons::footer}"></footer>
+
 <!-- end footer -->
 <!-- Javascript files-->
 <script th:src="@{/js/jquery.min.js}"></script>

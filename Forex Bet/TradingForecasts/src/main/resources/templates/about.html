@@ -30,179 +30,103 @@
 <!-- body -->
 
 <body class="main-layout">
-    <!-- loader  -->
-    <div class="loader_bg">
-        <div class="loader"><img th:src="@{/images/loading.gif}" alt="" /></div>
-    </div>
-    <!-- end loader -->
-    <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="index.html">Home</a>
-        <a href="register.html">Register</a>
-        <a href="login.html">Login</a>
-        <a class="active" href="about.html">About</a>
-        <a href="forecast.html">Forecasts</a>
-        <a href="testimonial.html">Testimonial</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <!-- header -->
-    <header>
-        <!-- header inner -->
-        <div class="head-top">
-            <div class="container-fluid">
-                <div class="row d_flex">
-                    <div class="col-sm-3">
-                        <div class="logo">
-                            <a href="index.html">Forex Bet</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-5">
-                        <ul class="social_icon text_align_right d_none">
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4">
-                        <ul class="email text_align_right">
-                            <li class="d_none"><a href="register.html"><i class="fa fa-registered"
-                                        aria-hidden="true"></i></a></li>
-                            <li class="d_none"> <a href="login.html"><i class="fa fa-user" style="cursor: pointer;"
-                                        aria-hidden="true"></i></a> </li>
-                            <li>
-                                <button class="openbtn" onclick="openNav()"><img th:src="@{/images/menu_btn.png}"></button>
-                            </li>
-                        </ul>
+<!-- loader  -->
+<div class="loader_bg">
+    <div class="loader"><img th:src="@{/images/loading.gif}" alt=""/></div>
+</div>
+<!-- end loader -->
+<div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a class="active" href="about.html">About</a>
+    <a href="forecast.html">Forecasts</a>
+    <a href="testimonial.html">Testimonial</a>
+    <a href="contact.html">Contact</a>
+</div>
+<!-- header -->
+<header>
+    <!-- header inner -->
+    <div class="head-top">
+        <div class="container-fluid">
+            <div class="row d_flex">
+                <div class="col-sm-3">
+                    <div class="logo">
+                        <a href="index.html">Forex Bet</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
-    <!-- end header -->
-    <!-- about -->
-    <div id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="about_border">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="titlepage text_align_left">
-                                    <h2>About Us</h2>
-                                </div>
-                                <div class="about_text">
-                                    <p>
-                                        We are a team of professionals who have been trading in the stock markets for
-                                        over 15 years. We use several strategies that are constantly refined and adapted
-                                        to the movements of the stock markets, and over the last 3 years, the success
-                                        rate of our predictions has been 95%.
-                                        We are NOT a broker through which you can trade Forex. We only show you the
-                                        movement of the market through our prediction, and you can trade through your
-                                        broker regardless of whether it is located in Bulgaria or abroad. The platforms
-                                        we use for our predictions are MetaTrader 4 and MetaTrader 5, but they are also
-                                        compatible with other platforms used by various brokers, not only in our country
-                                        but also outside it.
-                                    </p>
-                                    <!-- <a class="read_more" href="about.html">Read More</a> -->
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="about_img">
-                                    <figure><img class="img_responsive" th:src="@{/images/about-page.jpg}" alt="#" /></figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-sm-5">
+                    <ul class="social_icon text_align_right d_none">
+                        <li><a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <ul class="email text_align_right">
+                        <li class="d_none"><a href="register.html"><i class="fa fa-registered"
+                                                                      aria-hidden="true"></i></a></li>
+                        <li class="d_none"><a href="login.html"><i class="fa fa-user" style="cursor: pointer;"
+                                                                   aria-hidden="true"></i></a></li>
+                        <li>
+                            <button class="openbtn" onclick="openNav()"><img th:src="@{/images/menu_btn.png}"></button>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end about -->
-    <!-- footer -->
-<!--    <footer>-->
-<!--        <div class="footer">-->
-<!--            <div class="container">-->
-<!--                <div class="row">-->
-<!--                    <div class="col-md-12">-->
-<!--                        <a class="logo_bottom" href="index.html">Forex Bet</a>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-3 col-sm-6" ">-->
-<!--                  <div class=" Informa conta ">-->
-<!--                     <h3>Contact Us</h3>-->
-<!--                     <ul>-->
-<!--                        <li> <a href=" Javascript:void(0) "> <i class=" fa fa-map-marker " aria-hidden=" true "></i> Location-->
-<!--                           </a>-->
-<!--                        </li>-->
-<!--                        <li> <a href=" Javascript:void(0) "><i class=" fa fa-phone " aria-hidden=" true "></i> Call +01 1234567890-->
-<!--                           </a>-->
-<!--                        </li>-->
-<!--                        <li> <a href=" Javascript:void(0) "> <i class=" fa fa-envelope " aria-hidden=" true "></i> demo@gmail.com-->
-<!--                           </a>-->
-<!--                        </li>-->
-<!--                     </ul>-->
-<!--                     <ul>-->
-<!--                        <li>You can contact us                              -->
-<!--                        </li>-->
-<!--                        <li>by visit our office,                           -->
-<!--                        </li>-->
-<!--                        <li>call us by phone                          -->
-<!--                        </li>-->
-<!--                        <li> or send us e-mail                             -->
-<!--                        </li>-->
-<!--                     </ul>-->
-<!--                  </div>-->
-<!--               </div>-->
-<!--               <div class=" col-md-3 col-sm-6 "">-->
-<!--                        <div class="Informa helpful">-->
-<!--                            <h3>Useful Link</h3>-->
-<!--                            <ul>-->
-<!--                                <li>Basic Forex trading-->
-<!--                                </li>-->
-<!--                                <li>How to trade Forex-->
-<!--                                </li>-->
-<!--                                <li>Forex signals-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-3 col-sm-6" ">-->
-<!--                  <div class=" Informa ">-->
-<!--                     <h3>Offices</h3>-->
-<!--                     <ul>-->
-<!--                        <li>Office Sofia                              -->
-<!--                        </li>-->
-<!--                        <li>Office Plovdiv                           -->
-<!--                        </li>-->
-<!--                     </ul>-->
-<!--                  </div>-->
-<!--               </div>-->
-<!--               <div class=" col-md-3 col-sm-6 ">-->
-<!--                  <div class=" Informa ">-->
-<!--                     <h3>Newsletter</h3>-->
-<!--                     <form class=" newslatter_form ">-->
-<!--                        <input class=" ente " placeholder=" Enter your email " type=" text " name=" Enter your email ">-->
-<!--                        <button class=" subs_btn ">Subscribe</button>-->
-<!--                     </form>-->
-<!--                  </div>-->
-<!--               </div>-->
-<!--            </div>-->
-<!--            <div class=" copyright text_align_center ">-->
-<!--               <div class=" container ">-->
-<!--                  <div class=" row ">-->
-<!--                     <div class=" col-md-12 ">-->
-<!--                        <p>© 2023 All Rights Reserved. Design by Georgi Petrov</a></p>-->
-<!--                     </div>-->
-<!--                  </div>-->
-<!--               </div>-->
-<!--            </div>-->
-<!--         </div>-->
-<!--      </footer>-->
-      <!-- end footer -->
-      <!-- Javascript files-->
-    <script th:src="@{/js/jquery.min.js}"></script>
-    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-    <script th:src="@{/js/jquery-3.0.0.min.js}"></script>
-    <script th:src="@{/js/custom.js}"></script>
-   </body>
+</header>
+<!-- end header -->
+<!-- about -->
+<div id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about_border">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="titlepage text_align_left">
+                                <h2>About Us</h2>
+                            </div>
+                            <div class="about_text">
+                                <p>
+                                    We are a team of professionals who have been trading in the stock markets for
+                                    over 15 years. We use several strategies that are constantly refined and adapted
+                                    to the movements of the stock markets, and over the last 3 years, the success
+                                    rate of our predictions has been 95%.
+                                    We are NOT a broker through which you can trade Forex. We only show you the
+                                    movement of the market through our prediction, and you can trade through your
+                                    broker regardless of whether it is located in Bulgaria or abroad. The platforms
+                                    we use for our predictions are MetaTrader 4 and MetaTrader 5, but they are also
+                                    compatible with other platforms used by various brokers, not only in our country
+                                    but also outside it.
+                                </p>
+                                <!-- <a class="read_more" href="about.html">Read More</a> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about_img">
+                                <figure><img class="img_responsive" th:src="@{/images/about-page.jpg}" alt="#"/>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end about -->
+<!-- footer -->
+<footer th:replace="~{fragments/commons::footer}"></footer>
+<!-- end footer -->
+<!-- Javascript files-->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/jquery-3.0.0.min.js}"></script>
+<script th:src="@{/js/custom.js}"></script>
+</body>
 </html>
