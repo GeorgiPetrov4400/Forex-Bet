@@ -23,9 +23,6 @@
     <!-- awesome fontfamily -->
     <link rel="stylesheet"
           th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
-    <!--    &lt;!&ndash;[if lt IE 9]>-->
-    <!--      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
-    <!--      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]&ndash;&gt;-->
 </head>
 <!-- body -->
 
@@ -37,13 +34,13 @@
 <!-- end loader -->
 <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a href="index.html">Home</a>
-    <a href="register.html">Register</a>
-    <a href="login.html">Login</a>
-    <a href="about.html">About</a>
-    <a href="forecast.html">Forecasts</a>
-    <a href="testimonial.html">Testimonial</a>
-    <a class="active" href="contact.html">Contact</a>
+    <a href="/">Home</a>
+    <a th:href="@{/users/register}">Register</a>
+    <a th:href="@{/users/login}">Login</a>
+    <a th:href="@{/about}">About</a>
+    <a th:href="@{/forecast}">Forecasts</a>
+    <a th:href="@{/testimonial}">Testimonial</a>
+    <a class="active" th:href="@{/contact}">Contact</a>
 </div>
 <!-- header -->
 <header>
@@ -53,7 +50,7 @@
             <div class="row d_flex">
                 <div class="col-sm-3">
                     <div class="logo">
-                        <a href="index.html">Forex Bet</a>
+                        <a href="/">Forex Bet</a>
                     </div>
                 </div>
                 <div class="col-sm-5">
