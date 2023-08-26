@@ -31,10 +31,10 @@ public class SecurityConfiguration {
                                            SecurityContextRepository securityContextRepository) throws Exception {
         httpSecurity.authorizeHttpRequests()
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
-                .requestMatchers("/", "/about", "/users/login-error", "/free-forecasts",
-                        "/api/free-forecasts", "/forecasts/ui").permitAll()
-                .requestMatchers("/users/register", "/users/login").anonymous()
-                .requestMatchers("/about", "/contact", "/orders/order", "/my-account").authenticated()
+                .requestMatchers("/", "/about", "/contact", "/testimonial", "/forecast",
+                        "/users/login-error", "/free-forecasts", "/api/free-forecasts", "/forecasts/ui").permitAll()
+                .requestMatchers("/users/register", "/users/login", "/free-forecasts").anonymous()
+                .requestMatchers("/orders/order", "/my-account", "/my-forecasts", "/active-forecasts", "/expired-forecasts").authenticated()
                 .requestMatchers("/orders/order", "/orders/order/expire/{id}").hasRole(UserRoleEnum.Moderator.name())
                 .requestMatchers("/forecasts/add", "/orders/order", "/orders/order/expire/{id}", "/change-role")
                 .hasRole(UserRoleEnum.Admin.name())

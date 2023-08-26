@@ -35,4 +35,19 @@ public class HomeController {
     public String freeForecasts() {
         return "free-forecasts";
     }
+
+    @GetMapping("/my-forecasts")
+    public String myForecasts() {
+        return "my-forecasts";
+    }
+
+    @GetMapping("/active-forecasts")
+    public String activeForecasts() {
+        return "active-forecasts";
+    }
+
+    @GetMapping("/expired-forecasts")
+    public String expiredForecasts() {
+        return "expired-forecasts";
+    }
 }
