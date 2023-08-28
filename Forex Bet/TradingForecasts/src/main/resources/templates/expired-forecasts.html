@@ -42,7 +42,7 @@
     <a href="login.html">Login</a>
     <a href="about.html">About</a>
     <a href="forecast.html">Forecasts</a>
-    <a href="testimonial.html">Testimonial</a>
+    <a href="testimonial.html">Recommendation</a>
     <a href="contact.html">Contact</a>
 </div>
 <!-- header -->
@@ -53,7 +53,7 @@
             <div class="row d_flex">
                 <div class="col-sm-3">
                     <div class="logo">
-                        <a href="index.html">Forex Bet</a>
+                        <a href="/">Forex Bet</a>
                     </div>
                 </div>
                 <div class="col-sm-5">
@@ -82,40 +82,41 @@
 </header>
 <!-- end header -->
 <!-- forecasts -->
-<div class="wallet">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img th:src="@{/images/wa1.svg}" alt="#"/></i>
-                    <h3>FREE FORECASTS</h3>
-                    <p><a href="free-forecasts.html">Check all active free forecasts</a></p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img th:src="@{/images/wa2.svg}" alt="#"/></i>
-                    <h3>MY FORECASTS</h3>
-                    <p><a href="my-forecasts.html">Check your bought forecasts</a></p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img th:src="@{/images/wa3.svg}" alt="#"/></i>
-                    <h3>ACTIVE FORECASTS</h3>
-                    <p><a href="active-forecasts.html">Check all active forecasts</a></p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div id="wa_hover" class="wallet_box text_align_center">
-                    <i><img th:src="@{/images/wa4.svg}" alt="#"/></i>
-                    <h3>EXPIRED FORECASTS</h3>
-                    <p><a href="expired-forecasts.html">Check all expired forecasts</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<forecast th:replace="~{fragments/commons::forecast}"></forecast>
+<!--<div class="wallet">-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-3 col-sm-6">-->
+<!--                <div id="wa_hover" class="wallet_box text_align_center">-->
+<!--                    <i><img th:src="@{/images/wa1.svg}" alt="#"/></i>-->
+<!--                    <h3>FREE FORECASTS</h3>-->
+<!--                    <p><a href="free-forecasts.html">Check all active free forecasts</a></p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-3 col-sm-6">-->
+<!--                <div id="wa_hover" class="wallet_box text_align_center">-->
+<!--                    <i><img th:src="@{/images/wa2.svg}" alt="#"/></i>-->
+<!--                    <h3>MY FORECASTS</h3>-->
+<!--                    <p><a href="my-forecasts.html">Check your bought forecasts</a></p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-3 col-sm-6">-->
+<!--                <div id="wa_hover" class="wallet_box text_align_center">-->
+<!--                    <i><img th:src="@{/images/wa3.svg}" alt="#"/></i>-->
+<!--                    <h3>ACTIVE FORECASTS</h3>-->
+<!--                    <p><a href="active-forecasts.html">Check all active forecasts</a></p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-3 col-sm-6">-->
+<!--                <div id="wa_hover" class="wallet_box text_align_center">-->
+<!--                    <i><img th:src="@{/images/wa4.svg}" alt="#"/></i>-->
+<!--                    <h3>EXPIRED FORECASTS</h3>-->
+<!--                    <p><a href="expired-forecasts.html">Check all expired forecasts</a></p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <!-- end forecasts -->
 <!-- testimonial -->
 <div class="testimonial">
