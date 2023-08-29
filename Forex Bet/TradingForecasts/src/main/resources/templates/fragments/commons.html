@@ -71,6 +71,19 @@
     </ul>
 </nav>
 
+<forecastNav>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="/">Home</a>
+        <a th:href="@{/users/register}">Register</a>
+        <a th:href="@{/users/login}">Login</a>
+        <a th:href="@{/about}">About</a>
+        <a class="active" th:href="@{/forecast}">Forecasts</a>
+        <a th:href="@{/testimonial}">Recommendation</a>
+        <a th:href="@{/contact}">Contact</a>
+    </div>
+</forecastNav>
+
 <forecast>
     <div class="wallet">
         <div class="container-fluid">
@@ -108,13 +121,12 @@
     </div>
 </forecast>
 
-
 <footer>
     <div class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a class="logo_bottom" href="index.html">Forex Bet</a>
+                    <a class="logo_bottom" href="/">Forex Bet</a>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="Informa conta">

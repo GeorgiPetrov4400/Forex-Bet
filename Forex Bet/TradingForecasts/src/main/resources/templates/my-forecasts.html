@@ -35,16 +35,7 @@
     <div class="loader"><img th:src="@{/images/loading.gif}" alt=""/></div>
 </div>
 <!-- end loader -->
-<div id="mySidepanel" class="sidepanel">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a class="active" href="index.html">Home</a>
-    <a href="register.html">Register</a>
-    <a href="login.html">Login</a>
-    <a href="about.html">About</a>
-    <a href="forecast.html">Forecasts</a>
-    <a href="testimonial.html">Recommendation</a>
-    <a href="contact.html">Contact</a>
-</div>
+<forecastNav th:replace="~{fragments/commons::forecastNav}"></forecastNav>
 <!-- header -->
 <header>
     <!-- header inner -->
@@ -67,9 +58,10 @@
                 <div class="col-sm-4">
                     <ul class="email text_align_right">
                         <li class="d_none"><a th:href="@{/users/register}"><i class="fa fa-registered"
-                                                                      aria-hidden="true"></i></a></li>
+                                                                              aria-hidden="true"></i></a></li>
                         <li class="d_none"><a th:href="@{/users/login}"><i class="fa fa-user"
-                                                                   style="cursor: pointer;" aria-hidden="true"></i></a>
+                                                                           style="cursor: pointer;"
+                                                                           aria-hidden="true"></i></a>
                         </li>
                         <li>
                             <button class="openbtn" onclick="openNav()"><img th:src="@{/images/menu_btn.png}"></button>
@@ -83,40 +75,6 @@
 <!-- end header -->
 <!-- forecasts -->
 <forecast th:replace="~{fragments/commons::forecast}"></forecast>
-<!--<div class="wallet">-->
-<!--    <div class="container-fluid">-->
-<!--        <div class="row">-->
-<!--            <div class="col-lg-3 col-sm-6">-->
-<!--                <div id="wa_hover" class="wallet_box text_align_center">-->
-<!--                    <i><img th:src="@{/images/wa1.svg}" alt="#"/></i>-->
-<!--                    <h3>FREE FORECASTS</h3>-->
-<!--                    <p><a href="free-forecasts.html">Check all active free forecasts</a></p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-lg-3 col-sm-6">-->
-<!--                <div id="wa_hover" class="wallet_box text_align_center">-->
-<!--                    <i><img th:src="@{/images/wa2.svg}" alt="#"/></i>-->
-<!--                    <h3>MY FORECASTS</h3>-->
-<!--                    <p><a href="my-forecasts.html">Check your bought forecasts</a></p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-lg-3 col-sm-6">-->
-<!--                <div id="wa_hover" class="wallet_box text_align_center">-->
-<!--                    <i><img th:src="@{/images/wa3.svg}" alt="#"/></i>-->
-<!--                    <h3>ACTIVE FORECASTS</h3>-->
-<!--                    <p><a href="active-forecasts.html">Check all active forecasts</a></p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-lg-3 col-sm-6">-->
-<!--                <div id="wa_hover" class="wallet_box text_align_center">-->
-<!--                    <i><img th:src="@{/images/wa4.svg}" alt="#"/></i>-->
-<!--                    <h3>EXPIRED FORECASTS</h3>-->
-<!--                    <p><a href="expired-forecasts.html">Check all expired forecasts</a></p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 <!-- end forecasts -->
 <!-- testimonial -->
 <div class="testimonial">
