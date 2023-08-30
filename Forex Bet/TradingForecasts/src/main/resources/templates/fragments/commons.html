@@ -30,43 +30,55 @@
 </head>
 <body>
 
+<!--<nav>-->
+<!--    <ul class="nav">-->
+<!--        <li>-->
+<!--            <a href="/">Home</a>-->
+<!--        </li>-->
+<!--        <li sec:authorize="isAuthenticated()">-->
+<!--            <a th:href="@{/my-account}">My Account</a>-->
+<!--        </li>-->
+<!--        <li sec:authorize="isAnonymous()">-->
+<!--            <a th:href="@{/users/register}">Register</a>-->
+<!--        </li>-->
+<!--        <li sec:authorize="isAnonymous()">-->
+<!--            <a th:href="@{/users/login}">Login</a>-->
+<!--        </li>-->
+<!--        <li sec:authorize="hasRole('Admin')">-->
+<!--            <a th:href="@{/forecasts/add}">Add Forecast</a>-->
+<!--        </li>-->
+<!--        <li sec:authorize="isAuthenticated()">-->
+<!--            <a th:href="@{/orders/order}">My Orders</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a th:href="@{/forecasts/ui}">Free Forecast</a>-->
+<!--        </li>-->
+<!--        <li sec:authorize="isAuthenticated()">-->
+<!--            <a th:href="@{/contact}">Contact Us</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a th:href="@{/about}">About Us</a>-->
+<!--        </li>-->
+<!--        <li class="welcome" sec:authorize="isAuthenticated()">-->
+<!--            Welcome,-->
+<!--            <th:block sec:authentication="name"></th:block>!-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <form th:action="@{/users/logout}" sec:authorize="isAuthenticated()" th:method="post">-->
+<!--                <input class="button" type="submit" value="Logout">-->
+<!--            </form>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</nav>-->
+
 <nav>
-    <ul class="nav">
+    <ul class="email text_align_right">
+        <li class="d_none"><a th:href="@{/users/register}"><i class="fa fa-registered"
+                                                              aria-hidden="true"></i></a></li>
+        <li class="d_none"><a th:href="@{/users/login}"><i class="fa fa-user" style="cursor: pointer;"
+                                                           aria-hidden="true"></i></a></li>
         <li>
-            <a href="/">Home</a>
-        </li>
-        <li sec:authorize="isAuthenticated()">
-            <a th:href="@{/my-account}">My Account</a>
-        </li>
-        <li sec:authorize="isAnonymous()">
-            <a th:href="@{/users/register}">Register</a>
-        </li>
-        <li sec:authorize="isAnonymous()">
-            <a th:href="@{/users/login}">Login</a>
-        </li>
-        <li sec:authorize="hasRole('Admin')">
-            <a th:href="@{/forecasts/add}">Add Forecast</a>
-        </li>
-        <li sec:authorize="isAuthenticated()">
-            <a th:href="@{/orders/order}">My Orders</a>
-        </li>
-        <li>
-            <a th:href="@{/forecasts/ui}">Free Forecast</a>
-        </li>
-        <li sec:authorize="isAuthenticated()">
-            <a th:href="@{/contact}">Contact Us</a>
-        </li>
-        <li>
-            <a th:href="@{/about}">About Us</a>
-        </li>
-        <li class="welcome" sec:authorize="isAuthenticated()">
-            Welcome,
-            <th:block sec:authentication="name"></th:block>!
-        </li>
-        <li>
-            <form th:action="@{/users/logout}" sec:authorize="isAuthenticated()" th:method="post">
-                <input class="button" type="submit" value="Logout">
-            </form>
+            <button class="openbtn" onclick="openNav()"><img th:src="@{/images/menu_btn.png}"></button>
         </li>
     </ul>
 </nav>

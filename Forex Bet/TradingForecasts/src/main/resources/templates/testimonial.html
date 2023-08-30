@@ -65,15 +65,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-4">
-                    <ul class="email text_align_right">
-                        <li class="d_none"><a th:href="@{/users/register}"><i class="fa fa-registered"
-                                                                      aria-hidden="true"></i></a></li>
-                        <li class="d_none"><a th:href="@{/users/login}"><i class="fa fa-user" style="cursor: pointer;"
-                                                                   aria-hidden="true"></i></a></li>
-                        <li>
-                            <button class="openbtn" onclick="openNav()"><img th:src="@{/images/menu_btn.png}"></button>
-                        </li>
-                    </ul>
+                    <nav th:replace="~{fragments/commons::nav}"></nav>
                 </div>
             </div>
         </div>
