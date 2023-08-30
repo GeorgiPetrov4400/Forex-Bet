@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <!-- basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <!-- site metas -->
+  <title>XAU/USD Forecasts</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  <!-- style css -->
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <!-- responsive-->
+  <link rel="stylesheet" th:href="@{/css/responsive.css}">
+  <!-- awesome fontfamily -->
+  <link rel="stylesheet"
+        th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+</head>
+<!-- body -->
+<body class="main-layout">
+<!-- loader  -->
+<div class="loader_bg">
+  <div class="loader"><img th:src="@{/images/loading.gif}" alt=""/></div>
+</div>
+<!-- end loader -->
+<forecastNav th:replace="~{fragments/commons::forecastNav}"></forecastNav>
+<!-- header -->
+<header>
+  <!-- header inner -->
+  <div class="head-top">
+    <div class="container-fluid">
+      <div class="row d_flex">
+        <div class="col-sm-3">
+          <div class="logo">
+            <a href="/">Forex Bet</a>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <ul class="social_icon text_align_right d_none">
+            <li><a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
+            <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <nav th:replace="~{fragments/commons::nav}"></nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+<!-- start slider section -->
+<div id="top_section" class=" banner_main">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container-fluid">
+                <div class="carousel-caption relative">
+                  <div class="row d_flex">
+                    <div class="col-md-6">
+                      <div class="con_img">
+                        <figure><img class="img_responsive" th:src="@{/images/eur-usd.jpg}"
+                                     alt="#"/></figure>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="bluid">
+                        <h1>XAU/USD</h1>
+                        <p>Short XAU/USD for 1853 </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container-fluid">
+                <div class="carousel-caption relative">
+                  <div class="row d_flex">
+                    <div class="col-md-6">
+                      <div class="con_img">
+                        <figure><img class="img_responsive" th:src="@{/images/gold.jpg}"
+                                     alt="#"/>
+                        </figure>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="bluid">
+                        <h1>XAU/USD</h1>
+                        <p>Long XAU/USD for 1981 </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container-fluid">
+                <div class="carousel-caption relative">
+                  <div class="row d_flex">
+                    <div class="col-md-6">
+                      <div class="con_img">
+                        <figure><img class="img_responsive" th:src="@{/images/dax.jpg}"
+                                     alt="#"/>
+                        </figure>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="col-md-6">
+                        <div class="bluid">
+                          <h1>XAU/USD</h1>
+                          <p>Short XAU/USD for 1700 </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container-fluid">
+                <div class="carousel-caption relative">
+                  <div class="row d_flex">
+                    <div class="col-md-6">
+                      <div class="con_img">
+                        <figure><img class="img_responsive" th:src="@{/images/dow-jones.jpg}"
+                                     alt="#"/></figure>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="col-md-6">
+                        <div class="bluid">
+                          <h1>XAU/USD</h1>
+                          <p>Short XAU/USD for 1777 </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container-fluid">
+                <div class="carousel-caption relative">
+                  <div class="row d_flex">
+                    <div class="col-md-6">
+                      <div class="con_img">
+                        <figure><img class="img_responsive" th:src="@{/images/nasdaq.jpg}"
+                                     alt="#"/></figure>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="col-md-6">
+                        <div class="bluid">
+                          <h1>XAU/USD</h1>
+                          <p>Short XAU/USD for 1900 </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end slider section -->
+<!-- footer-->
+<footer th:replace="~{fragments/commons::footer}"></footer>
+<!-- end footer -->
+<!-- Javascript files-->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/jquery-3.0.0.min.js}"></script>
+<script th:src="@{/js/custom.js}"></script>
+</body>
+</html>

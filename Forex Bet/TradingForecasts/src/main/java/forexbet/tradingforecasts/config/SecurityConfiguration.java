@@ -33,7 +33,8 @@ public class SecurityConfiguration {
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .requestMatchers("/", "/about", "/contact", "/testimonial", "/forecast",
                         "/users/login-error", "/free-forecasts", "/api/free-forecasts", "/forecasts/ui",
-                        "/my-forecasts", "/active-forecasts", "/expired-forecasts").permitAll()
+                        "/my-forecasts", "/active-forecasts", "/expired-forecasts",
+                        "/eur-usd", "/gold", "/dax", "/dow-jones", "/nasdaq").permitAll()
                 .requestMatchers("/users/register", "/users/login", "/free-forecasts").anonymous()
                 .requestMatchers("/orders/order", "/my-account").authenticated()
                 .requestMatchers("/orders/order", "/orders/order/expire/{id}").hasRole(UserRoleEnum.Moderator.name())
