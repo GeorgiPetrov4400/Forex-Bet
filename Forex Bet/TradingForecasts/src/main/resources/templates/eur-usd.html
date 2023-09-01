@@ -77,14 +77,16 @@
                                     <div class="row d_flex">
                                         <div class="col-md-6">
                                             <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/eur-usd.jpg}"
+                                                <figure><img class="img_responsive" th:src="@{/images/EURUSDM5.png}"
                                                              alt="#"/></figure>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="bluid">
                                                 <h1>EUR/USD</h1>
-                                                <p>Short EUR/USD for 1.000 </p>
+                                                <p>Short EUR/USD for 1.000</p>
+<!--                                                <p>Date/Time: <span id="datetime"></span></p>-->
+                                                <p id="datetime"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -97,7 +99,7 @@
                                     <div class="row d_flex">
                                         <div class="col-md-6">
                                             <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/gold.jpg}"
+                                                <figure><img class="img_responsive" th:src="@{/images/EURUSDM5.png}"
                                                              alt="#"/>
                                                 </figure>
                                             </div>
@@ -105,7 +107,7 @@
                                         <div class="col-md-6">
                                             <div class="bluid">
                                                 <h1>EUR/USD</h1>
-                                                <p>Long EUR/USD for 1.1111 </p>
+                                                <p>Long EUR/USD for 1.1111</p>
                                             </div>
                                         </div>
                                     </div>
@@ -118,7 +120,7 @@
                                     <div class="row d_flex">
                                         <div class="col-md-6">
                                             <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/dax.jpg}"
+                                                <figure><img class="img_responsive" th:src="@{/images/EURUSDM5.png}"
                                                              alt="#"/>
                                                 </figure>
                                             </div>
@@ -127,7 +129,7 @@
                                             <div class="col-md-6">
                                                 <div class="bluid">
                                                     <h1>EUR/USD</h1>
-                                                    <p>Short EUR/USD for 1.0444 </p>
+                                                    <p>Short EUR/USD for 1.0444</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -141,7 +143,7 @@
                                     <div class="row d_flex">
                                         <div class="col-md-6">
                                             <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/dow-jones.jpg}"
+                                                <figure><img class="img_responsive" th:src="@{/images/EURUSDM5.png}"
                                                              alt="#"/></figure>
                                             </div>
                                         </div>
@@ -149,7 +151,7 @@
                                             <div class="col-md-6">
                                                 <div class="bluid">
                                                     <h1>EUR/USD</h1>
-                                                    <p>Short EUR/USD for 0.999 </p>
+                                                    <p>Short EUR/USD for 0.999</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -163,7 +165,7 @@
                                     <div class="row d_flex">
                                         <div class="col-md-6">
                                             <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/nasdaq.jpg}"
+                                                <figure><img class="img_responsive" th:src="@{/images/EURUSDM5.png}"
                                                              alt="#"/></figure>
                                             </div>
                                         </div>
@@ -171,7 +173,7 @@
                                             <div class="col-md-6">
                                                 <div class="bluid">
                                                     <h1>EUR/USD</h1>
-                                                    <p>Short EUR/USD for 1.0760 </p>
+                                                    <p>Short EUR/USD for 1.0760</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -202,5 +204,13 @@
 <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 <script th:src="@{/js/jquery-3.0.0.min.js}"></script>
 <script th:src="@{/js/custom.js}"></script>
+<!--<script>-->
+<!--    var dt = new Date();-->
+<!--    document.getElementById('date-time').innerHTML = dt;-->
+<!--</script>-->
+<script>
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = dt.toLocaleString();
+</script>
 </body>
 </html>
