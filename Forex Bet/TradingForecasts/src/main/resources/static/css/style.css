@@ -1055,9 +1055,18 @@ button {
      border: none;
      cursor: pointer;
      width: 100%;
-     /* border-radius: 35px; */
+      border-radius: 35px;
  }
  
  button:hover {
      opacity: 0.8;
  }
+
+form div p a {
+     color: whitesmoke;
+     font-size: 22px;
+}
+
+form div p a:hover {
+     color: limegreen;
+}

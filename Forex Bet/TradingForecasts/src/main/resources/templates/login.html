@@ -23,9 +23,6 @@
     <!-- awesome fontfamily -->
     <link rel="stylesheet"
           th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
-    <!--    &lt;!&ndash;[if lt IE 9]>-->
-    <!--      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
-    <!--      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]&ndash;&gt;-->
 </head>
 <!-- body -->
 
@@ -85,18 +82,15 @@
             <div class="col-md-12">
                 <div class="works_vedio">
                     <form th:action="@{/users/login}" th:method="post">
-
                         <div class="container">
                             <div th:if="${param.error}" class="alert alert-danger">
                                 <strong>Wrong username or password!</strong>
                             </div>
-
                             <div>
                                 <label for="username"><b>Username</b></label>
                                 <input th:value="${username}" id="username" name="username" type="text"
                                        placeholder="Enter your username" required minlength="3" maxlength="20">
                             </div>
-
                             <div>
                                 <label for="password"><b>Password</b></label>
                                 <input type="password" placeholder="Enter your password" id="password" name="password"
@@ -105,7 +99,7 @@
                                     password!</small>
 
                                 <div class="container register" th:if="${bad_credentials}">
-                                    <p>Create new account? <a class="register" href="register.html">Register</a>.</p>
+                                    <p>Create new account? <a class="register" th:href="@{/users/register}">Register</a>.</p>
                                 </div>
                             </div>
 
