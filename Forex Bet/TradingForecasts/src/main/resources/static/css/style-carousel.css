@@ -291,6 +291,31 @@ ul.social_icon li a:hover {
     transition: ease-in all 0.7s;
 }
 
+ul.user-nav li {
+    display: inline-block;
+    padding-right: 20px;
+    color: #fefeff;
+    text-align: center;
+    line-height: 33px;
+    border-radius: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul.user-nav li form {
+    background: none;
+    border: none;
+}
+
+ul.user-nav li input.button {
+    background: transparent;
+    border: none;
+    color: #fefeff;
+}
+
+ul.user-nav li input.button:hover {
+    color: limegreen;
+}
 
 /*---------------------------------------------------------------------
 menu section

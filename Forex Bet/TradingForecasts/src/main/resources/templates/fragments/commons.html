@@ -83,6 +83,21 @@
     </ul>
 </nav>
 
+<wellcome>
+    <ul class="user-nav">
+        <li class="welcome" sec:authorize="isAuthenticated()">
+            Welcome,
+            <th:block sec:authentication="name"></th:block>
+            !
+        </li>
+        <li>
+            <form th:action="@{/users/logout}" sec:authorize="isAuthenticated()" th:method="post">
+                <input class="button" type="submit" value="Logout">
+            </form>
+        </li>
+    </ul>
+</wellcome>
+
 <forecastNav>
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
