@@ -59,15 +59,6 @@
 <!--        <li>-->
 <!--            <a th:href="@{/about}">About Us</a>-->
 <!--        </li>-->
-<!--        <li class="welcome" sec:authorize="isAuthenticated()">-->
-<!--            Welcome,-->
-<!--            <th:block sec:authentication="name"></th:block>!-->
-<!--        </li>-->
-<!--        <li>-->
-<!--            <form th:action="@{/users/logout}" sec:authorize="isAuthenticated()" th:method="post">-->
-<!--                <input class="button" type="submit" value="Logout">-->
-<!--            </form>-->
-<!--        </li>-->
 <!--    </ul>-->
 <!--</nav>-->
 
@@ -78,11 +69,15 @@
         <li class="d_none"><a th:href="@{/users/login}"><i class="fa fa-user" style="cursor: pointer;"
                                                            aria-hidden="true"></i></a></li>
         <li class="d_none">
-            <a href="javascript:void(0);" onclick="logout();">
-                <i class="fa fa-sign-out" aria-hidden="true"></i>
-            </a>
+            <form th:action="@{/users/logout}" sec:authorize="isAuthenticated()" th:method="post">
+                <button type="submit" class="logout-button">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                </button>
+            </form>
+            <!--            <a th:action="@{/users/logout}" sec:authorize="isAuthenticated()" th:method="post" onclick="logout();">-->
+<!--                <i class="fa fa-sign-out" aria-hidden="true"></i>-->
+<!--            </a>-->
         </li>
-        <!--        <li class="d_none"><a th:href="@{/users/logout}"></a><i class="fa fa-sign-out" aria-hidden="true"></i></li>-->
         <li>
             <button class="openbtn" onclick="openNav()"><img th:src="@{/images/menu_btn.png}"></button>
         </li>

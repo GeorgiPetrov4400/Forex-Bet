@@ -1,6 +1,7 @@
 function logout() {
     fetch('/users/logout', {
-        method: 'POST'
+        method: 'POST',
+        body: '_csrf=' + csrfToken,
     })
         .then(response => {
             if (response.ok) {

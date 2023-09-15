@@ -317,6 +317,11 @@ ul.user-nav li input.button:hover {
     color: limegreen;
 }
 
+ul .d_none .logout-button{
+    background: transparent;
+    color: #fefeff;
+}
+
 /*---------------------------------------------------------------------
 menu section
 ---------------------------------------------------------------------*/
