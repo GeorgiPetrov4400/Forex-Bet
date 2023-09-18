@@ -32,17 +32,8 @@
 
 <!--<nav>-->
 <!--    <ul class="nav">-->
-<!--        <li>-->
-<!--            <a href="/">Home</a>-->
-<!--        </li>-->
 <!--        <li sec:authorize="isAuthenticated()">-->
 <!--            <a th:href="@{/my-account}">My Account</a>-->
-<!--        </li>-->
-<!--        <li sec:authorize="isAnonymous()">-->
-<!--            <a th:href="@{/users/register}">Register</a>-->
-<!--        </li>-->
-<!--        <li sec:authorize="isAnonymous()">-->
-<!--            <a th:href="@{/users/login}">Login</a>-->
 <!--        </li>-->
 <!--        <li sec:authorize="hasRole('Admin')">-->
 <!--            <a th:href="@{/forecasts/add}">Add Forecast</a>-->
@@ -53,20 +44,14 @@
 <!--        <li>-->
 <!--            <a th:href="@{/forecasts/ui}">Free Forecast</a>-->
 <!--        </li>-->
-<!--        <li sec:authorize="isAuthenticated()">-->
-<!--            <a th:href="@{/contact}">Contact Us</a>-->
-<!--        </li>-->
-<!--        <li>-->
-<!--            <a th:href="@{/about}">About Us</a>-->
-<!--        </li>-->
 <!--    </ul>-->
 <!--</nav>-->
 
 <nav>
     <ul class="email text_align_right">
-        <li class="d_none"><a th:href="@{/users/register}"><i class="fa fa-registered"
+        <li class="d_none" sec:authorize="isAnonymous()"><a th:href="@{/users/register}"><i class="fa fa-registered"
                                                               aria-hidden="true"></i></a></li>
-        <li class="d_none"><a th:href="@{/users/login}"><i class="fa fa-user" style="cursor: pointer;"
+        <li class="d_none" sec:authorize="isAnonymous()"><a th:href="@{/users/login}"><i class="fa fa-user" style="cursor: pointer;"
                                                            aria-hidden="true"></i></a></li>
         <li class="d_none">
             <form th:action="@{/users/logout}" sec:authorize="isAuthenticated()" th:method="post">
@@ -216,7 +201,5 @@
         </div>
     </div>
 </footer>
-
-
 </body>
 </html>
