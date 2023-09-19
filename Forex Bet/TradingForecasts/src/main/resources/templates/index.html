@@ -41,7 +41,7 @@
     <a th:href="@{/about}">About</a>
     <a th:href="@{/forecast}">Forecasts</a>
     <a th:href="@{/testimonial}">Recommendation</a>
-    <a th:href="@{/contact}">Contact</a>
+    <a th:href="@{/contact}" sec:authorize="isAuthenticated()">Contact</a>
 </div>
 <!-- header -->
 <header>
@@ -745,7 +745,7 @@
 </div>
 <!-- end testimonial -->
 <!-- contact -->
-<div class="contact">
+<div class="contact" sec:authorize="isAuthenticated()">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

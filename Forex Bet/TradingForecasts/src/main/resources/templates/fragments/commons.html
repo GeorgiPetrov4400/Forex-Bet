@@ -59,9 +59,6 @@
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                 </button>
             </form>
-            <!--            <a th:action="@{/users/logout}" sec:authorize="isAuthenticated()" th:method="post" onclick="logout();">-->
-<!--                <i class="fa fa-sign-out" aria-hidden="true"></i>-->
-<!--            </a>-->
         </li>
         <li>
             <button class="openbtn" onclick="openNav()"><img th:src="@{/images/menu_btn.png}"></button>
@@ -93,7 +90,7 @@
         <a th:href="@{/about}">About</a>
         <a class="active" th:href="@{/forecast}">Forecasts</a>
         <a th:href="@{/testimonial}">Recommendation</a>
-        <a th:href="@{/contact}">Contact</a>
+        <a th:href="@{/contact}" sec:authorize="isAuthenticated()">Contact</a>
     </div>
 </forecastNav>
 

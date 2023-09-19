@@ -527,15 +527,13 @@ ul.email li i {
 
 #wa_hover:hover.wallet_box p {
      color: #fff;
+     font-size: 18px;
      transition: ease-in all 0.5s;
 }
 
-
 /** end wallet **/
 
-
 /** about **/
-
 .about {
      padding: 90px 0 60px 0;
 }
