@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+  <!-- basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <!-- site metas -->
+  <title>Add Forecast</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  <!-- style css -->
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <!-- responsive-->
+  <link rel="stylesheet" th:href="@{/css/responsive.css}">
+  <!-- awesome fontfamily -->
+  <link rel="stylesheet"
+        th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+</head>
+<!-- body -->
+<body class="main-layout">
+<!-- loader  -->
+<div class="loader_bg">
+  <div class="loader"><img th:src="@{/images/loading.gif}" alt=""/></div>
+</div>
+<!-- end loader -->
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="/static">Home</a>
+  <a th:href="@{/register}">Register</a>
+  <a th:href="@{/users/login}">Login</a>
+  <a th:href="@{/about}">About</a>
+  <a th:href="@{/forecast}">Forecasts</a>
+  <a class="active" th:href="@{/forecasts/add}">Add Forecast</a>
+  <a th:href="@{/testimonial}">Recommendation</a>
+  <a th:href="@{/contact}" sec:authorize="isAuthenticated()">Contact</a>
+</div>
+<!-- header -->
+<header>
+  <!-- header inner -->
+  <div class="head-top">
+    <div class="container-fluid">
+      <div class="row d_flex">
+        <div class="col-sm-3">
+          <div class="logo">
+            <a href="/">Forex Bet</a>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <ul class="social_icon text_align_right d_none">
+            <li><a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
+            <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <nav th:replace="~{fragments/commons::nav}"></nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+<div class="works">
+  <main>
+    <form th:action="@{/forecasts/add}" th:method="post" th:object="${forecastAddDTO}" enctype="multipart/form-data"
+          class="mx-auto w-25 bg-blur rounded">
+
+      <div class="form-group">
+        <div class="description">
+          <label th:for="description" class="description">Description</label>
+        </div>
+        <div>
+                    <textarea th:field="*{description}"
+                              type="text" class="form-control"
+                              id="description" name="description"></textarea>
+        </div>
+        <small class="errors alert alert-danger" th:if="${#fields.hasErrors('description')}"> Description length
+          must be between 5 and 100 characters!</small>
+      </div>
+
+      <div class="form-group">
+        <div class="pictureUrl" id="pictureUrl">
+          <label for="pictureUrl">Picture</label>
+        </div>
+
+        <div class="form-group">
+          <input type="file" name="pictureUrl" class="form-control-file" aria-describedby="pictureUrl">
+        </div>
+
+        <small class="errors alert alert-danger" th:if="${#fields.hasErrors('pictureUrl')}">Picture url must be
+          available</small>
+      </div>
+
+      <div class="form-group">
+        <div class="price">
+          <label th:for="price" class="price">Price</label>
+        </div>
+        <div>
+          <input th:field="*{price}" th:errorclass="is-invalid" type="number" step="1.00" class="price-input"
+                 id="price" name="price"/>
+        </div>
+        <small class="errors alert alert-danger" th:if="${#fields.hasErrors('price')}">Price must be null or
+          positive number!</small>
+      </div>
+
+      <div class="form-group">
+        <div class="category">
+          <label th:for="category" class="category">Category</label>
+        </div>
+        <div>
+          <select class="custom-select" id="category" name="category">
+            <option value="">Select category</option>
+            <option th:each="c : ${T(forexbet.tradingforecasts.model.entity.enums.CategoryNameEnum).values()}"
+                    th:value="${c}" th:text="${c}"></option>
+          </select>
+        </div>
+        <small class="errors alert alert-danger" th:if="${#fields.hasErrors('category')}">You must select a
+          category!</small>
+      </div>
+
+      <div class="form-group">
+        <div class="type">
+          <label th:for="type" class="type">Type</label>
+        </div>
+        <div>
+          <select class="custom-select" id="type" name="type">
+            <option value="">Select type</option>
+            <option>Long</option>
+            <option>Short</option>
+          </select>
+        </div>
+        <small class="errors alert alert-danger" th:if="${#fields.hasErrors('type')}">You must select a
+          type!</small>
+      </div>
+
+      <div class="button">
+        <button type="submit" class="button-add" value="Register">Add Forecast</button>
+      </div>
+
+    </form>
+  </main>
+</div>
+
+<footer th:replace="~{fragments/commons::footer}"></footer>
+
+<!-- Javascript files-->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/jquery-3.0.0.min.js}"></script>
+<script th:src="@{/js/custom.js}"></script>
+</body>
+</html>

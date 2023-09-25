@@ -89,6 +89,7 @@
         <a th:href="@{/users/login}">Login</a>
         <a th:href="@{/about}">About</a>
         <a class="active" th:href="@{/forecast}">Forecasts</a>
+        <a th:href="@{/forecasts/add}" sec:authorize="hasRole('Admin')">Add Forecast</a>
         <a th:href="@{/testimonial}">Recommendation</a>
         <a th:href="@{/contact}" sec:authorize="isAuthenticated()">Contact</a>
     </div>
