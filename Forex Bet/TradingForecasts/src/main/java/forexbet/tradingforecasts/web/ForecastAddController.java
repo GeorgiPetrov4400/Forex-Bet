@@ -49,7 +49,7 @@ public class ForecastAddController {
 
         forecastService.createForecast(forecastAddDTO, principal, forecastAddDTO.getPictureUrl());
 
-        return "redirect:/orders/order";
+        return "redirect:/forecast";
 
     }
 }

@@ -49,7 +49,7 @@ public class ForecastController {
         addForecastPicture(allExpiredEurUsdForecast);
         model.addAttribute("allExpiredEurUsdForecast", allExpiredEurUsdForecast);
 
-        return "eur-usd-forecast";
+        return "eur-usd";
     }
 
     @GetMapping("/gold-forecast")
@@ -68,7 +68,7 @@ public class ForecastController {
         addForecastPicture(allExpiredGoldForecast);
         model.addAttribute("allExpiredGoldForecast", allExpiredGoldForecast);
 
-        return "gold-forecast";
+        return "gold";
     }
 
     @GetMapping("/dax-forecast")
@@ -87,7 +87,7 @@ public class ForecastController {
         addForecastPicture(allExpiredDaxForecast);
         model.addAttribute("allExpiredDaxForecast", allExpiredDaxForecast);
 
-        return "dax-forecast";
+        return "dax";
     }
 
     @GetMapping("/dow-jones-forecast")
@@ -106,7 +106,7 @@ public class ForecastController {
         addForecastPicture(allExpiredDowJonesForecast);
         model.addAttribute("allExpiredDowJonesForecast", allExpiredDowJonesForecast);
 
-        return "dow-jones-forecast";
+        return "dow-jones";
     }
 
     @GetMapping("/nasdaq-forecast")
@@ -125,7 +125,7 @@ public class ForecastController {
         addForecastPicture(allExpiredNasdaqForecast);
         model.addAttribute("allExpiredNasdaqForecast", allExpiredNasdaqForecast);
 
-        return "nasdaq-forecast";
+        return "nasdaq";
     }
 
     private void addForecastPicture(List<ForecastViewModel> allActiveForecasts) {
