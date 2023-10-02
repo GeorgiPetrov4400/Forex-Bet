@@ -35,12 +35,12 @@ public class SecurityConfiguration {
                         "/users/login-error", "/free-forecasts", "/api/free-forecasts", "/forecasts/ui",
                         "/expired-forecasts").permitAll()
                 .requestMatchers("/users/register", "/users/login", "/free-forecasts").anonymous()
-                .requestMatchers("/orders/order", "/my-account", "/my-forecasts", "/contact",
+                .requestMatchers("/active-forecasts/orders", "/my-account", "/my-forecasts", "/contact",
                         "/active-forecasts", "/eur-usd", "/gold", "/dax", "/dow-jones", "/nasdaq").authenticated()
-                .requestMatchers("/orders/order", "/orders/order/expire/{id}").hasRole(UserRoleEnum.Moderator.name())
-                .requestMatchers("/forecasts/add", "/orders/order", "/orders/order/expire/{id}", "/change-role")
+                .requestMatchers("/orders/order", "/active-forecasts/order/expire/{id}").hasRole(UserRoleEnum.Moderator.name())
+                .requestMatchers("/forecasts/add", "/active-forecasts/orders", "/active-forecasts/order/expire/{id}", "/change-role")
                 .hasRole(UserRoleEnum.Admin.name())
-                .requestMatchers("/orders/order/buy/{id}").hasRole(UserRoleEnum.User.name())
+                .requestMatchers("/active-forecasts/order/buy/{id}").hasRole(UserRoleEnum.User.name())
                 .anyRequest()
                 .authenticated()
                 .and()

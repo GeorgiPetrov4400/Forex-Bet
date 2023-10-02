@@ -33,7 +33,7 @@ public class ForecastController {
         return "free-forecasts";
     }
 
-    @GetMapping("/eur-usd-forecast")
+    @GetMapping("/eur-usd")
     public String forecastsEurUsd(Model model) {
         Category byCategoryNameEnum = categoryService.findByCategoryNameEnum(CategoryNameEnum.EurUsd);
 

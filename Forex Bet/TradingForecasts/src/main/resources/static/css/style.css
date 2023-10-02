@@ -1068,3 +1068,77 @@ form div p a {
 form div p a:hover {
     color: limegreen;
 }
+
+
+/*orders-style*/
+
+form .button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+}
+
+table {
+    width: auto;
+    height: auto;
+    alignment: center;
+}
+
+table,
+th,
+td {
+    background-color: rgb(36, 32, 32);
+    border: 3px solid whitesmoke;
+    color: white;
+    text-align: center;
+}
+
+table, tr, td {
+    height: 6vh;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.active-forecast {
+    margin-left: -40px;
+}
+
+.buy-button {
+    background-color: green;
+    text-decoration: none;
+    list-style: none;
+}
+
+.buy-button :hover {
+    color: black;
+}
+
+.expired-button {
+    background-color: darkgoldenrod;
+}
+
+.expired-button :hover {
+    color: black;
+}
+
+.delete-button {
+    background-color: red;
+}
+
+.delete-button :hover {
+    color: black;
+}
+
+textarea {
+    resize: vertical;
+}
+

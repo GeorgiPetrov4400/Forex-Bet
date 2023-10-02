@@ -14,7 +14,7 @@ import java.security.Principal;
 import java.util.List;
 
 @Controller
-@RequestMapping("/orders")
+@RequestMapping("/active-forecasts")
 public class OrderController {
 
     private final ForecastService forecastService;
@@ -25,7 +25,7 @@ public class OrderController {
         this.pictureService = pictureService;
     }
 
-    @GetMapping("/order")
+    @GetMapping("orders")
     public String getAllActiveForecast(Principal principal, Model model) {
 
         List<ForecastViewModel> userBoughtForecasts = forecastService.getUserBoughtForecasts(principal);
@@ -44,7 +44,7 @@ public class OrderController {
         addForecastPicture(expiredForecasts);
         model.addAttribute("expiredForecasts", expiredForecasts);
 
-        return "order";
+        return "orders";
     }
 
     private void addForecastPicture(List<ForecastViewModel> allActiveForecasts) {
