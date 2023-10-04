@@ -40,9 +40,9 @@ public class OrderController {
         addForecastPicture(allActiveForecasts);
         model.addAttribute("allActiveForecast", allActiveForecasts);
 
-        List<ForecastViewModel> expiredForecasts = forecastService.getExpiredForecasts();
-        addForecastPicture(expiredForecasts);
-        model.addAttribute("expiredForecasts", expiredForecasts);
+//        List<ForecastViewModel> expiredForecasts = forecastService.getExpiredForecasts();
+//        addForecastPicture(expiredForecasts);
+//        model.addAttribute("expiredForecasts", expiredForecasts);
 
         return "orders";
     }
@@ -54,24 +54,24 @@ public class OrderController {
         }
     }
 
-    @GetMapping("/order/buy/{id}")
+    @GetMapping("/orders/buy/{id}")
     public String buyForecast(@PathVariable Long id, Principal principal) {
         forecastService.buyForecast(id, principal);
 
-        return "redirect:/orders/order";
+        return "redirect:/active-forecasts/orders";
     }
 
-    @GetMapping("/order/expire/{id}")
+    @GetMapping("/orders/expire/{id}")
     public String expiredForecast(@PathVariable Long id) {
         forecastService.expireForecastById(id);
 
-        return "redirect:/orders/order";
+        return "redirect:/active-forecasts/orders";
     }
 
     @GetMapping("/orders/remove/{id}")
     public String removeForecast(@PathVariable Long id) {
         forecastService.removeForecastById(id);
 
-        return "redirect:/orders/order";
+        return "redirect:/active-forecasts/orders";
     }
 }

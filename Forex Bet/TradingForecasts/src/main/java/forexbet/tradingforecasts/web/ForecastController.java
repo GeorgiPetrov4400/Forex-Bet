@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -31,6 +32,15 @@ public class ForecastController {
     @GetMapping("/ui")
     public String freeForecasts() {
         return "free-forecasts";
+    }
+
+    @GetMapping("/expired-forecasts")
+    public String expiredForecasts(Model model) {
+        List<ForecastViewModel> expiredForecasts = forecastService.getExpiredForecasts();
+        addForecastPicture(expiredForecasts);
+        model.addAttribute("expiredForecasts", expiredForecasts);
+
+        return "expired-forecasts";
     }
 
     @GetMapping("/eur-usd")

@@ -92,10 +92,10 @@
                             <a th:text="*{f.getPrice() + ' €'}">Price</a>
                         </td>
                         <td class="buy-button" style="width: 5%">
-                            <a th:href="@{/orders/order/buy/{id}(id=${f.id})}">BUY</a>
+                            <a th:href="@{/active-forecasts/orders/buy/{id}(id=${f.id})}">BUY</a>
                         </td>
                         <td class="expired-button" style="width: 5%" sec:authorize="hasRole('Admin')">
-                            <a th:href="@{/orders/order/expire/{id}(id=*{f.id})}">Expired</a>
+                            <a th:href="@{/active-forecasts/orders/expire/{id}(id=*{f.id})}">Expired</a>
                         </td>
                     </tr>
                 </table>

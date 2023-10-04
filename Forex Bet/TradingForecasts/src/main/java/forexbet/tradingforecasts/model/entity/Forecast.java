@@ -21,11 +21,9 @@ public class Forecast extends BaseEntity {
     private BigDecimal price;
 
     @Column(nullable = false)
-//    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime created;
 
     @Column
-//    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime closed;
 
     @Column(name = "forecast_type", nullable = false)

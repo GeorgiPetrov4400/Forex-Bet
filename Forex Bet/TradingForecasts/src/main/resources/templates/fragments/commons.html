@@ -34,17 +34,6 @@
 <!--    <ul class="nav">-->
 <!--        <li sec:authorize="isAuthenticated()">-->
 <!--            <a th:href="@{/my-account}">My Account</a>-->
-<!--        </li>-->
-<!--        <li sec:authorize="hasRole('Admin')">-->
-<!--            <a th:href="@{/forecasts/add}">Add Forecast</a>-->
-<!--        </li>-->
-<!--        <li sec:authorize="isAuthenticated()">-->
-<!--            <a th:href="@{/orders/order}">My Orders</a>-->
-<!--        </li>-->
-<!--        <li>-->
-<!--            <a th:href="@{/forecasts/ui}">Free Forecast</a>-->
-<!--        </li>-->
-<!--    </ul>-->
 <!--</nav>-->
 
 <nav>
@@ -124,7 +113,7 @@
                     <div id="wa_hover" class="wallet_box text_align_center">
                         <i><img th:src="@{/images/wa4.svg}" alt="#"/></i>
                         <h3>EXPIRED FORECASTS</h3>
-                        <p><a th:href="@{/expired-forecasts}">Check all expired forecasts</a></p>
+                        <p><a th:href="@{/forecasts/expired-forecasts}">Check all expired forecasts</a></p>
                     </div>
                 </div>
             </div>
