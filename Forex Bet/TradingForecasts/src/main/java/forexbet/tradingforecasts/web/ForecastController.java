@@ -10,6 +10,7 @@ import forexbet.tradingforecasts.service.PictureService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
@@ -41,6 +42,13 @@ public class ForecastController {
         model.addAttribute("expiredForecasts", expiredForecasts);
 
         return "expired-forecasts";
+    }
+
+    @GetMapping("/expired-forecasts/remove/{id}")
+    public String removeForecast(@PathVariable Long id) {
+        forecastService.removeForecastById(id);
+
+        return "redirect:/forecasts/expired-forecasts";
     }
 
     @GetMapping("/eur-usd")

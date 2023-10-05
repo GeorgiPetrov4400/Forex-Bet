@@ -68,10 +68,10 @@ public class OrderController {
         return "redirect:/active-forecasts/orders";
     }
 
-    @GetMapping("/orders/remove/{id}")
-    public String removeForecast(@PathVariable Long id) {
-        forecastService.removeForecastById(id);
-
-        return "redirect:/active-forecasts/orders";
-    }
+//    @GetMapping("/orders/remove/{id}")
+//    public String removeForecast(@PathVariable Long id) {
+//        forecastService.removeForecastById(id);
+//
+//        return "redirect:/active-forecasts/orders";
+//    }
 }

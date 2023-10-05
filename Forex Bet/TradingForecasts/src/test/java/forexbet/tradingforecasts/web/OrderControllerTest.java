@@ -51,12 +51,12 @@ class OrderControllerTest {
         Assertions.assertEquals(expectedViewName, viewName);
     }
 
-    @Test
-    void testRemoveForecast() {
-        Long forecastId = 1L;
-        String expectedViewName = "redirect:/orders/order";
-        String viewName = orderController.removeForecast(forecastId);
-        verify(forecastService, times(1)).removeForecastById(forecastId);
-        Assertions.assertEquals(expectedViewName, viewName);
-    }
+//    @Test
+//    void testRemoveForecast() {
+//        Long forecastId = 1L;
+//        String expectedViewName = "redirect:/orders/order";
+//        String viewName = orderController.removeForecast(forecastId);
+//        verify(forecastService, times(1)).removeForecastById(forecastId);
+//        Assertions.assertEquals(expectedViewName, viewName);
+//    }
 }

@@ -95,7 +95,7 @@
                             <a th:text="*{f.getPrice() + ' €'}">Price</a>
                         </td>
                         <td class="delete-button" style="width: 5%" sec:authorize="hasRole('Admin')">
-                            <a th:href="@{orders/remove/{id}(id=*{f.id})}">Delete</a>
+                            <a th:href="@{/forecasts/expired-forecasts/remove/{id}(id=*{f.id})}">Delete</a>
                         </td>
                     </tr>
                 </table>
