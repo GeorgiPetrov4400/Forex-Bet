@@ -1,9 +1,9 @@
 package forexbet.tradingforecasts.web;
 
-import forexbet.tradingforecasts.model.view.ForecastViewModel;
-import forexbet.tradingforecasts.model.view.PictureViewModel;
 import forexbet.tradingforecasts.model.entity.Category;
 import forexbet.tradingforecasts.model.entity.enums.CategoryNameEnum;
+import forexbet.tradingforecasts.model.view.ForecastViewModel;
+import forexbet.tradingforecasts.model.view.PictureViewModel;
 import forexbet.tradingforecasts.service.CategoryService;
 import forexbet.tradingforecasts.service.ForecastService;
 import forexbet.tradingforecasts.service.PictureService;
@@ -34,6 +34,16 @@ public class ForecastController {
     public String freeForecasts() {
         return "free-forecasts";
     }
+
+    @GetMapping("my-forecasts")
+    public String userBoughtForecasts(Principal principal, Model model) {
+        List<ForecastViewModel> userBoughtForecasts = forecastService.getUserBoughtForecasts(principal);
+        addForecastPicture(userBoughtForecasts);
+        model.addAttribute("userBoughtForecasts", userBoughtForecasts);
+
+        return "my-forecasts";
+    }
+
 
     @GetMapping("/expired-forecasts")
     public String expiredForecasts(Model model) {

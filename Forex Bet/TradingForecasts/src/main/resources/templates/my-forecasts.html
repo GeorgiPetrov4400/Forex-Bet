@@ -65,6 +65,37 @@
 <!-- forecasts -->
 <forecast th:replace="~{fragments/commons::forecast}"></forecast>
 <!-- end forecasts -->
+
+<div class="container bg-blur rounded mt-1 mb-4" th:action="@{/forecasts/my-forecasts}">
+    <div class="my-forecast" style="height: 40vh; overflow: auto">
+        <ul th:each="f : ${userBoughtForecasts}">
+            <li>
+                <table>
+                    <tr>
+                        <td style="width: 8%">
+                            <a th:text="*{f.getCategory().toString()}">Category</a>
+                        </td>
+                        <td style="width: 8%">
+                            <a th:text="*{f.getForecastType()}">Type</a>
+                        </td>
+                        <td style="width: 25%">
+                            <a th:text="*{f.getDescription()}">Description</a>
+                        </td>
+                        <td style="width: 15%">
+                            <a th:text="${#temporals.format(f.getCreated(), 'dd-MM-yyyy HH:mm:ss')}">Date created</a>
+                        </td>
+                        <td style="width: 20%">
+                            <a href=""><img th:src="*{f.pictureUrl}" alt="Image"></a>
+                        </td>
+                        <td style="width: 8%">
+                            <a th:text="*{f.getPrice() + ' €'}">Price</a>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <!-- testimonial -->
 <div class="testimonial">
     <div class="container-fluid">

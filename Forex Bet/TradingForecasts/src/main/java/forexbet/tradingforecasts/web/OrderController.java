@@ -28,10 +28,6 @@ public class OrderController {
     @GetMapping("orders")
     public String getAllActiveForecast(Principal principal, Model model) {
 
-        List<ForecastViewModel> userBoughtForecasts = forecastService.getUserBoughtForecasts(principal);
-        addForecastPicture(userBoughtForecasts);
-        model.addAttribute("userBoughtForecasts", userBoughtForecasts);
-
 //        List<ForecastViewModel> ownForecastsAdded = forecastService.getOwnForecastsAdded(principal);
 //        addForecastPicture(ownForecastsAdded);
 //        model.addAttribute("ownForecastsAdded", ownForecastsAdded);
@@ -63,11 +59,4 @@ public class OrderController {
 
         return "redirect:/active-forecasts/orders";
     }
-
-//    @GetMapping("/orders/remove/{id}")
-//    public String removeForecast(@PathVariable Long id) {
-//        forecastService.removeForecastById(id);
-//
-//        return "redirect:/active-forecasts/orders";
-//    }
 }
