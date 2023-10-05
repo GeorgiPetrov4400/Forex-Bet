@@ -32,9 +32,9 @@ public class OrderController {
         addForecastPicture(userBoughtForecasts);
         model.addAttribute("userBoughtForecasts", userBoughtForecasts);
 
-        List<ForecastViewModel> ownForecastsAdded = forecastService.getOwnForecastsAdded(principal);
-        addForecastPicture(ownForecastsAdded);
-        model.addAttribute("ownForecastsAdded", ownForecastsAdded);
+//        List<ForecastViewModel> ownForecastsAdded = forecastService.getOwnForecastsAdded(principal);
+//        addForecastPicture(ownForecastsAdded);
+//        model.addAttribute("ownForecastsAdded", ownForecastsAdded);
 
         List<ForecastViewModel> allActiveForecasts = forecastService.getActiveForecasts();
         addForecastPicture(allActiveForecasts);

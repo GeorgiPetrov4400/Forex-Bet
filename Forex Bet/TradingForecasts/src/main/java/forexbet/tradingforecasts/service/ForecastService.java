@@ -12,7 +12,7 @@ public interface ForecastService {
 
     void createForecast(ForecastAddDTO forecastAddDTO,Principal principal, MultipartFile imageFile);
 
-    List<ForecastViewModel> getOwnForecastsAdded(Principal principal);
+//    List<ForecastViewModel> getOwnForecastsAdded(Principal principal);
 
     List<ForecastViewModel> getActiveForecasts();
 
