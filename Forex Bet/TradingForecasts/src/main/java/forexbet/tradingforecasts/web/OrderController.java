@@ -40,10 +40,6 @@ public class OrderController {
         addForecastPicture(allActiveForecasts);
         model.addAttribute("allActiveForecast", allActiveForecasts);
 
-//        List<ForecastViewModel> expiredForecasts = forecastService.getExpiredForecasts();
-//        addForecastPicture(expiredForecasts);
-//        model.addAttribute("expiredForecasts", expiredForecasts);
-
         return "orders";
     }
 
