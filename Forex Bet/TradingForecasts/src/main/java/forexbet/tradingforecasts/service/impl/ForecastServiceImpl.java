@@ -82,16 +82,16 @@ public class ForecastServiceImpl implements ForecastService {
                 .collect(Collectors.toList())).orElse(null);
     }
 
-//    @Override
-//    public List<ForecastViewModel> getOwnForecastsAdded(Principal principal) {
-//        Optional<User> adminOptional = userRepository.findByUsername(principal.getName());
-//
-//        return adminOptional.map(user ->
-//                forecastRepository.findByAdmin_IdAndClosedIsNullOrderByCreatedDesc(user.getId())
-//                        .stream()
-//                        .map(forecast -> modelMapper.map(forecast, ForecastViewModel.class))
-//                        .collect(Collectors.toList())).orElse(null);
-//    }
+    @Override
+    public List<ForecastViewModel> getOwnForecastsAdded(Principal principal) {
+        Optional<User> adminOptional = userRepository.findByUsername(principal.getName());
+
+        return adminOptional.map(user ->
+                forecastRepository.findByAdmin_IdAndClosedIsNullOrderByCreatedDesc(user.getId())
+                        .stream()
+                        .map(forecast -> modelMapper.map(forecast, ForecastViewModel.class))
+                        .collect(Collectors.toList())).orElse(null);
+    }
 
     @Override
     public List<ForecastViewModel> getActiveForecasts() {
