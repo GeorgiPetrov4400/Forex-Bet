@@ -44,7 +44,6 @@ public class ForecastController {
         return "my-forecasts";
     }
 
-
     @GetMapping("/expired-forecasts")
     public String expiredForecasts(Model model) {
         List<ForecastViewModel> expiredForecasts = forecastService.getExpiredForecasts();
@@ -80,7 +79,7 @@ public class ForecastController {
         return "eur-usd";
     }
 
-    @GetMapping("/gold-forecast")
+    @GetMapping("/gold")
     public String forecastGold(Model model) {
         Category byCategoryNameEnum = categoryService.findByCategoryNameEnum(CategoryNameEnum.Gold);
 
@@ -99,7 +98,7 @@ public class ForecastController {
         return "gold";
     }
 
-    @GetMapping("/dax-forecast")
+    @GetMapping("/dax")
     public String forecastDax(Model model) {
         Category byCategoryNameEnum = categoryService.findByCategoryNameEnum(CategoryNameEnum.Dax);
 
@@ -118,7 +117,7 @@ public class ForecastController {
         return "dax";
     }
 
-    @GetMapping("/dow-jones-forecast")
+    @GetMapping("/dow-jones")
     public String forecastDowJones(Model model) {
         Category byCategoryNameEnum = categoryService.findByCategoryNameEnum(CategoryNameEnum.DowJones);
 
@@ -137,7 +136,7 @@ public class ForecastController {
         return "dow-jones";
     }
 
-    @GetMapping("/nasdaq-forecast")
+    @GetMapping("/nasdaq")
     public String forecastNasdaq(Model model) {
         Category byCategoryNameEnum = categoryService.findByCategoryNameEnum(CategoryNameEnum.Nasdaq);
 

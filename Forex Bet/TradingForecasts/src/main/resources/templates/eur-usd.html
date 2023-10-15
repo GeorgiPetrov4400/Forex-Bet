@@ -76,24 +76,23 @@
                             th:class="${iterStat.index == 0} ? 'active' : ''">
                         </li>
                     </ol>
-
-                    <div class="carousel-inner" th:each="f, iterStat : ${allActiveEurUsdForecasts}">
-                        <div class="carousel-item" th:classappend="${iterStat.index} ? 'active' : ''">
+                    <div class="carousel-inner" th:each="f : ${allActiveEurUsdForecasts}">
+                        <div class="carousel-item active">
                             <div class="container-fluid">
                                 <div class="carousel-caption relative">
                                     <div class="row d_flex">
                                         <div class="col-md-6">
                                             <div class="con_img">
-                                                <figure>
-                                                    <img class="img_responsive" th:src="*{f.pictureUrl}" alt="Image"/>
-                                                </figure>
+                                                <figure><img class="img_responsive" th:src="*{f.pictureUrl}"
+                                                             alt="Image"/></figure>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="bluid">
-                                                <h1 th:text="${f.getCategory().toString()}">EUR/USD</h1>
-                                                <p th:text="${f.getDescription()}">Short EUR/USD for 1.000</p>
-                                                <p th:text="${#temporals.format(f.getCreated(), 'dd-MM-yyyy HH:mm:ss')}">Date created</p>
+                                                <h1 th:text="*{f.getCategory().toString()}"></h1>
+                                                <p th:text="*{f.getDescription()}"></p>
+                                                <p th:text="${#temporals.format(f.getCreated(), 'dd-MM-yyyy HH:mm:ss')}">
+                                                    Date created</p>
                                             </div>
                                         </div>
                                     </div>
@@ -101,121 +100,6 @@
                             </div>
                         </div>
                     </div>
-
-<!--                    <div class="carousel-inner" th:each="f : ${allActiveEurUsdForecasts}">-->
-<!--                        <div class="carousel-item active">-->
-<!--                            <div class="container-fluid">-->
-<!--                                <div class="carousel-caption relative">-->
-<!--                                    <div class="row d_flex">-->
-<!--                                        <div class="col-md-6">-->
-<!--                                            <div class="con_img">-->
-<!--                                                <figure><img class="img_responsive" th:src="*{f.pictureUrl}"-->
-<!--                                                             alt="Image"/></figure>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                        <div class="col-md-6">-->
-<!--                                            <div class="bluid">-->
-<!--                                                <h1 th:text="*{f.getCategory().toString()}">EUR/USD</h1>-->
-<!--                                                <p th:text="*{f.getDescription()}">Short EUR/USD for 1.000</p>-->
-<!--                                                <p th:text="${#temporals.format(f.getCreated(), 'dd-MM-yyyy HH:mm:ss')}">-->
-<!--                                                    Date created</p>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="carousel-item">-->
-<!--                            <div class="container-fluid">-->
-<!--                                <div class="carousel-caption relative">-->
-<!--                                    <div class="row d_flex">-->
-<!--                                        <div class="col-md-6">-->
-<!--                                            <div class="con_img">-->
-<!--                                                <figure><img class="img_responsive" th:src="@{/images/EURUSDM5.png}"-->
-<!--                                                             alt="#"/>-->
-<!--                                                </figure>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                        <div class="col-md-6">-->
-<!--                                            <div class="bluid">-->
-<!--                                                <h1>EUR/USD</h1>-->
-<!--                                                <p>Long EUR/USD for 1.1111</p>-->
-<!--                                                &lt;!&ndash;<p class="forecast-time" th:text="${forecast.time}"></p>&ndash;&gt;-->
-<!--                                                &lt;!&ndash;<p class="forecast-date" th:text="${forecast.date}"></p>&ndash;&gt;-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="carousel-item">-->
-<!--                            <div class="container-fluid">-->
-<!--                                <div class="carousel-caption relative">-->
-<!--                                    <div class="row d_flex">-->
-<!--                                        <div class="col-md-6">-->
-<!--                                            <div class="con_img">-->
-<!--                                                <figure><img class="img_responsive" th:src="@{/images/EURUSDM5.png}"-->
-<!--                                                             alt="#"/>-->
-<!--                                                </figure>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                        <div class="col-md-6">-->
-<!--                                            <div class="bluid">-->
-<!--                                                <h1>EUR/USD</h1>-->
-<!--                                                <p>Short EUR/USD for 1.0444</p>-->
-<!--                                                &lt;!&ndash;<p class="forecast-time" th:text="${forecast.time}"></p>&ndash;&gt;-->
-<!--                                                &lt;!&ndash;<p class="forecast-date" th:text="${forecast.date}"></p>&ndash;&gt;-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="carousel-item">-->
-<!--                            <div class="container-fluid">-->
-<!--                                <div class="carousel-caption relative">-->
-<!--                                    <div class="row d_flex">-->
-<!--                                        <div class="col-md-6">-->
-<!--                                            <div class="con_img">-->
-<!--                                                <figure><img class="img_responsive" th:src="@{/images/EURUSDM5.png}"-->
-<!--                                                             alt="#"/></figure>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                        <div class="col-md-6">-->
-<!--                                            <div class="bluid">-->
-<!--                                                <h1>EUR/USD</h1>-->
-<!--                                                <p>Short EUR/USD for 0.999</p>-->
-<!--                                                &lt;!&ndash;<p class="forecast-time" th:text="${forecast.time}"></p>&ndash;&gt;-->
-<!--                                                &lt;!&ndash;<p class="forecast-date" th:text="${forecast.date}"></p>&ndash;&gt;-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="carousel-item">-->
-<!--                            <div class="container-fluid">-->
-<!--                                <div class="carousel-caption relative">-->
-<!--                                    <div class="row d_flex">-->
-<!--                                        <div class="col-md-6">-->
-<!--                                            <div class="con_img">-->
-<!--                                                <figure><img class="img_responsive" th:src="@{/images/EURUSDM5.png}"-->
-<!--                                                             alt="#"/></figure>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                        <div class="col-md-6">-->
-<!--                                            <div class="bluid">-->
-<!--                                                <h1>EUR/USD</h1>-->
-<!--                                                <p>Short EUR/USD for 1.0760</p>-->
-<!--                                                &lt;!&ndash;<p class="forecast-time" th:text="${forecast.time}"></p>&ndash;&gt;-->
-<!--                                                &lt;!&ndash;<p class="forecast-date" th:text="${forecast.date}"></p>&ndash;&gt;-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="sr-only">Previous</span>
@@ -240,6 +124,6 @@
 <script th:src="@{/js/jquery-3.0.0.min.js}"></script>
 <script th:src="@{/js/custom.js}"></script>
 <script th:src="@{/js/zoom.image.js}"></script>
-<script th:src="@{/js/datetime.create.js}"></script>
+<!--<script th:src="@{/js/datetime.create.js}"></script>-->
 </body>
 </html>

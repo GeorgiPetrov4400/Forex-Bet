@@ -69,109 +69,29 @@
             <div class="col-md-12">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li th:each="f, iterStat : ${allActiveGoldForecasts}"
+                            data-target="#myCarousel"
+                            th:data-slide-to="${iterStat.index}"
+                            th:class="${iterStat.index == 0} ? 'active' : ''">
+                        </li>
                     </ol>
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" th:each="f : ${allActiveGoldForecasts}">
                         <div class="carousel-item active">
                             <div class="container-fluid">
                                 <div class="carousel-caption relative">
                                     <div class="row d_flex">
                                         <div class="col-md-6">
                                             <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/XAU_USDM5.png}"
-                                                             alt="#"/></figure>
+                                                <figure><img class="img_responsive" th:src="*{f.pictureUrl}"
+                                                             alt="Image"/></figure>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="bluid">
-                                                <h1>XAU/USD</h1>
-                                                <p>Short XAU/USD for 1853 </p>
-                                                <p id="forecast-time"></p>
-                                                <p id="forecast-date"></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-6">
-                                            <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/XAU_USDM5.png}"
-                                                             alt="#"/>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="bluid">
-                                                <h1>XAU/USD</h1>
-                                                <p>Long XAU/USD for 1981 </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-6">
-                                            <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/XAU_USDM5.png}"
-                                                             alt="#"/>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="bluid">
-                                                <h1>XAU/USD</h1>
-                                                <p>Short XAU/USD for 1700 </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-6">
-                                            <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/XAU_USDM5.png}"
-                                                             alt="#"/></figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="bluid">
-                                                <h1>XAU/USD</h1>
-                                                <p>Short XAU/USD for 1777 </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-6">
-                                            <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/XAU_USDM5.png}"
-                                                             alt="#"/></figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="bluid">
-                                                <h1>XAU/USD</h1>
-                                                <p>Short XAU/USD for 1900 </p>
+                                                <h1 th:text="*{f.getCategory().toString()}"></h1>
+                                                <p th:text="*{f.getDescription()}"></p>
+                                                <p th:text="${#temporals.format(f.getCreated(), 'dd-MM-yyyy HH:mm:ss')}">
+                                                    Date created</p>
                                             </div>
                                         </div>
                                     </div>
