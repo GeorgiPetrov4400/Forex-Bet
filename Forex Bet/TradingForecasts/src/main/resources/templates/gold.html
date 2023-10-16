@@ -78,20 +78,22 @@
                     <div class="carousel-inner" th:each="f : ${allActiveGoldForecasts}">
                         <div class="carousel-item active">
                             <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-6">
-                                            <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="*{f.pictureUrl}"
-                                                             alt="Image"/></figure>
+                                <div class="forecast_border">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive" th:src="*{f.pictureUrl}"
+                                                                 alt="Image"/></figure>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="bluid">
-                                                <h1 th:text="*{f.getCategory().toString()}"></h1>
-                                                <p th:text="*{f.getDescription()}"></p>
-                                                <p th:text="${#temporals.format(f.getCreated(), 'dd-MM-yyyy HH:mm:ss')}">
-                                                    Date created</p>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h1 th:text="*{f.getCategory().toString()}"></h1>
+                                                    <p th:text="*{f.getDescription()}"></p>
+                                                    <p th:text="${#temporals.format(f.getCreated(), 'dd-MM-yyyy HH:mm:ss')}">
+                                                        Date created</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

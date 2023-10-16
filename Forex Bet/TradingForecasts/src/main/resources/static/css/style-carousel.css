@@ -692,3 +692,49 @@ input[type=password]:focus {
     background-color: #ddd;
     outline: none;
 }
+
+.forecast_border {
+    border: #ddd dashed 1px;
+    padding: 50px 50px;
+}
+
+div .buy-button {
+    color: white;
+    background-color: limegreen;
+
+    font-size: 20px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-left: -80px;
+    margin-top: -400px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 35px;
+}
+
+div .buy-button :hover {
+    cursor: pointer;
+    opacity: 0.8;
+    color: black;
+}
+
+div .expired-button {
+    color: white;
+    background-color: gold;
+
+    font-size: 20px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-left: -80px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 35px;
+}
+
+div .expired-button :hover {
+    cursor: pointer;
+    opacity: 0.8;
+    color: black;
+}
