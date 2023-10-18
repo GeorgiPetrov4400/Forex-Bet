@@ -704,9 +704,9 @@ div .buy-button {
 
     font-size: 20px;
     padding: 14px 20px;
-    margin: 8px 0;
-    margin-left: -80px;
-    margin-top: -400px;
+    /*margin: 8px 0;*/
+    /*margin-left: -80px;*/
+    margin-top: -200px;
     border: none;
     cursor: pointer;
     width: 20%;
@@ -726,7 +726,7 @@ div .expired-button {
     font-size: 20px;
     padding: 14px 20px;
     margin: 8px 0;
-    margin-left: -80px;
+    /*margin-left: -80px;*/
     border: none;
     cursor: pointer;
     width: 20%;

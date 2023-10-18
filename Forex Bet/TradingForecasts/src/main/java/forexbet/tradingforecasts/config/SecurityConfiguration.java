@@ -36,7 +36,8 @@ public class SecurityConfiguration {
                         "/forecasts/expired-forecasts").permitAll()
                 .requestMatchers("/users/register", "/users/login", "/free-forecasts").anonymous()
                 .requestMatchers("/active-forecasts/orders", "/my-account", "/my-forecasts", "/contact",
-                        "/active-forecasts", "/eur-usd", "/gold", "/dax", "/dow-jones", "/nasdaq").authenticated()
+                        "/active-forecasts", "/forecasts/eur-usd", "/forecasts/gold", "/forecasts/dax",
+                        "/forecasts/dow-jones", "/forecasts/nasdaq").authenticated()
                 .requestMatchers("/active-forecasts/order/expire/{id}").hasRole(UserRoleEnum.Moderator.name())
                 .requestMatchers("/forecasts/add", "/active-forecasts/orders", "/active-forecasts/order/expire/{id}", "/change-role")
                 .hasRole(UserRoleEnum.Admin.name())

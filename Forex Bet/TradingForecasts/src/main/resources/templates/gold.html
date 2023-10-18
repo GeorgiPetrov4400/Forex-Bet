@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
     <!-- basic -->
@@ -90,10 +91,18 @@
                                             <div class="col-md-6">
                                                 <div class="bluid">
                                                     <h1 th:text="*{f.getCategory().toString()}"></h1>
+                                                    <h2 th:text="*{f.getForecastType()}"></h2>
                                                     <p th:text="*{f.getDescription()}"></p>
                                                     <p th:text="${#temporals.format(f.getCreated(), 'dd-MM-yyyy HH:mm:ss')}">
                                                         Date created</p>
+                                                    <p th:text="*{f.getPrice() + ' €'}"></p>
                                                 </div>
+                                                <p class="buy-button">
+                                                    <a th:href="@{/active-forecasts/orders/buy/{id}(id=${f.id})}">BUY</a>
+                                                </p>
+                                                <p class="expired-button" sec:authorize="hasRole('Admin')">
+                                                    <a th:href="@{/active-forecasts/orders/expire/{id}(id=*{f.id})}">Expired</a>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
