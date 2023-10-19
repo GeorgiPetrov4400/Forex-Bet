@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
     <!-- basic -->
@@ -69,109 +70,39 @@
             <div class="col-md-12">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li th:each="f, iterStat : ${allActiveDowJonesForecasts}"
+                            data-target="#myCarousel"
+                            th:data-slide-to="${iterStat.index}"
+                            th:class="${iterStat.index == 0} ? 'active' : ''">
+                        </li>
                     </ol>
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" th:each="f : ${allActiveDowJonesForecasts}">
                         <div class="carousel-item active">
                             <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-6">
-                                            <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/US30M5.png}"
-                                                             alt="#"/></figure>
+                                <div class="forecast_border">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive" th:src="*{f.pictureUrl}"
+                                                                 alt="Image"/></figure>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="bluid">
-                                                <h1>Dow Jones</h1>
-                                                <p>Short Dow Jones for 32950 </p>
-                                                <p id="forecast-time"></p>
-                                                <p id="forecast-date"></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-6">
-                                            <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/US30M5.png}"
-                                                             alt="#"/>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="bluid">
-                                                <h1>Dow Jones</h1>
-                                                <p>Long Dow Jones for 35000</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-6">
-                                            <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/US30M5.png}"
-                                                             alt="#"/>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="bluid">
-                                                <h1>Dow Jones</h1>
-                                                <p>Short Dow Jones for 31890</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-6">
-                                            <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/US30M5.png}"
-                                                             alt="#"/></figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="bluid">
-                                                <h1>Dow Jones</h1>
-                                                <p>Short Dow Jones for 31410</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-6">
-                                            <div class="con_img">
-                                                <figure><img class="img_responsive" th:src="@{/images/US30M5.png}"
-                                                             alt="#"/></figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="bluid">
-                                                <h1>Dow Jones</h1>
-                                                <p>Short Dow Jones for 32200</p>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h1 th:text="*{f.getCategory().toString()}"></h1>
+                                                    <h2 th:text="*{f.getForecastType()}"></h2>
+                                                    <p th:text="*{f.getDescription()}"></p>
+                                                    <p th:text="${#temporals.format(f.getCreated(), 'dd-MM-yyyy HH:mm:ss')}">
+                                                        Date created</p>
+                                                    <p th:text="*{f.getPrice() + ' €'}"></p>
+                                                </div>
+                                                <p class="buy-button">
+                                                    <a th:href="@{/active-forecasts/orders/buy/{id}(id=${f.id})}">BUY</a>
+                                                </p>
+                                                <p class="expired-button" sec:authorize="hasRole('Admin')">
+                                                    <a th:href="@{/active-forecasts/orders/expire/{id}(id=*{f.id})}">Expired</a>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
