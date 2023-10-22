@@ -909,8 +909,8 @@ ul.email li i {
 
 .ente {
     background: transparent;
-    color: #c9c7c7;
-    border: inherit;
+    color: black;
+    /*border: inherit;*/
     padding: 0 18px;
     height: 51px;
     width: 100%;
@@ -921,6 +921,7 @@ ul.email li i {
 }
 
 .subs_btn {
+    margin-left: 45px;
     max-width: 191px;
     display: inline-block;
     background: transparent;
@@ -935,6 +936,7 @@ ul.email li i {
 }
 
 .subs_btn:hover {
+    color: black;
     background: #face34;
     transition: ease-in all 0.5s;
     border: #face34 solid 2px;
