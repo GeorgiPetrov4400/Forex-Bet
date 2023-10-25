@@ -459,7 +459,7 @@ ul.email li i {
 
 .banner_main .bluid h1 {
     color: #fff;
-    font-size: 55px;
+    font-size: 45px;
     line-height: 65px;
     font-weight: bold;
     padding-bottom: 45px;
@@ -708,7 +708,7 @@ div .buy-button {
     padding: 14px 20px;
     /*margin: 8px 0;*/
     /*margin-left: -80px;*/
-    margin-top: -200px;
+    margin-top: -150px;
     border: none;
     cursor: pointer;
     width: 20%;

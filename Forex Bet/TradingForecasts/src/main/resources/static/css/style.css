@@ -846,7 +846,6 @@ ul.email li i {
     opacity: 1;
 }
 
-
 /** end contact section **/
 
 /** footer **/
@@ -960,7 +959,6 @@ ul.email li i {
     color: #face34;
 }
 
-
 /** end footer **/
 
 
@@ -1003,12 +1001,6 @@ input[type=password]:focus {
     outline: none;
 }
 
-/* hr {
-     border: 1px solid #f1f1f1;
-     margin-bottom: 25px;
-     margin-right: -15px;
-} */
-
 .registerbtn {
     font-size: 20px;
     background-color: #04AA6D;
@@ -1033,13 +1025,6 @@ input[type=password]:focus {
     margin-top: 3px;
     background-color: whitesmoke;
 }
-
-/*small {*/
-/*    color: red;*/
-/*    !*background-color: whitesmoke;*!*/
-/*    font-size: 16px;*/
-/*    !*margin-left: 20px;*!*/
-/*}*/
 
 .signin {
     text-align: center;
@@ -1144,7 +1129,6 @@ ul li {
 textarea {
     resize: vertical;
 }
-
 
 /*free-forecasts*/
 table {
