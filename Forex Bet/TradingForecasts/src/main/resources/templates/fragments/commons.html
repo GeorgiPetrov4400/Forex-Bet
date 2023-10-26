@@ -39,9 +39,12 @@
 <nav>
     <ul class="email text_align_right">
         <li class="d_none" sec:authorize="isAnonymous()"><a th:href="@{/users/register}"><i class="fa fa-registered"
-                                                              aria-hidden="true"></i></a></li>
-        <li class="d_none" sec:authorize="isAnonymous()"><a th:href="@{/users/login}"><i class="fa fa-user" style="cursor: pointer;"
-                                                           aria-hidden="true"></i></a></li>
+                                                                                            aria-hidden="true"></i></a>
+        </li>
+        <li class="d_none" sec:authorize="isAnonymous()"><a th:href="@{/users/login}"><i class="fa fa-user"
+                                                                                         style="cursor: pointer;"
+                                                                                         aria-hidden="true"></i></a>
+        </li>
         <li class="d_none">
             <form th:action="@{/users/logout}" sec:authorize="isAuthenticated()" th:method="post">
                 <button type="submit" class="logout-button">
@@ -142,8 +145,8 @@
                                         <div class="testomoniam_text text_align_center">
                                             <i><img th:src="@{/images/eur-usd.jpg}" alt="#"/></i>
                                             <h3></h3>
-                                            <a class="read_more" th:href="@{/forecasts/eur-usd}">Choose
-                                                forecast </a>
+                                            <a class="read_more" th:href="@{/forecasts/eur-usd}"
+                                               sec:authorize="isAuthenticated()">Choose forecast </a>
                                         </div>
                                     </div>
                                     <div class="col-md-9">
@@ -175,7 +178,8 @@
                                         <div class="testomoniam_text text_align_center">
                                             <i><img th:src="@{/images/gold.jpg}" alt="#"/></i>
                                             <h3></h3>
-                                            <a class="read_more" th:href="@{/forecasts/gold}">Choose forecast </a>
+                                            <a class="read_more" th:href="@{/forecasts/gold}"
+                                               sec:authorize="isAuthenticated()">Choose forecast </a>
                                         </div>
                                     </div>
                                     <div class="col-md-9">
@@ -207,7 +211,8 @@
                                         <div class="testomoniam_text text_align_center">
                                             <i><img th:src="@{/images/dax.jpg}" alt="#"/></i>
                                             <h3></h3>
-                                            <a class="read_more" th:href="@{/forecasts/dax}">Choose forecast </a>
+                                            <a class="read_more" th:href="@{/forecasts/dax}"
+                                               sec:authorize="isAuthenticated()">Choose forecast </a>
                                         </div>
                                     </div>
                                     <div class="col-md-9">
@@ -234,8 +239,8 @@
                                         <div class="testomoniam_text text_align_center">
                                             <i><img th:src="@{/images/dow-jones.jpg}" alt="#"/></i>
                                             <h3></h3>
-                                            <a class="read_more" th:href="@{/forecasts/dow-jones}">Choose
-                                                forecast </a>
+                                            <a class="read_more" th:href="@{/forecasts/dow-jones}"
+                                               sec:authorize="isAuthenticated()">Choose forecast </a>
                                         </div>
                                     </div>
                                     <div class="col-md-9">
@@ -262,8 +267,8 @@
                                         <div class="testomoniam_text text_align_center">
                                             <i><img th:src="@{/images/nasdaq.jpg}" alt="#"/></i>
                                             <h3></h3>
-                                            <a class="read_more" th:href="@{/forecasts/nasdaq}">Choose
-                                                forecast </a>
+                                            <a class="read_more" th:href="@{/forecasts/nasdaq}"
+                                               sec:authorize="isAuthenticated()">Choose forecast </a>
                                         </div>
                                     </div>
                                     <div class="col-md-9">
