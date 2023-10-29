@@ -28,10 +28,6 @@ public class OrderController {
     @GetMapping("orders")
     public String getAllActiveForecast(Principal principal, Model model) {
 
-//        List<ForecastViewModel> ownForecastsAdded = forecastService.getOwnForecastsAdded(principal);
-//        addForecastPicture(ownForecastsAdded);
-//        model.addAttribute("ownForecastsAdded", ownForecastsAdded);
-
         List<ForecastViewModel> allActiveForecasts = forecastService.getActiveForecasts();
         addForecastPicture(allActiveForecasts);
         model.addAttribute("allActiveForecast", allActiveForecasts);
