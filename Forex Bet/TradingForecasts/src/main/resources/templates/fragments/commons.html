@@ -29,13 +29,6 @@
     <!--      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]&ndash;&gt;-->
 </head>
 <body>
-
-<!--<nav>-->
-<!--    <ul class="nav">-->
-<!--        <li sec:authorize="isAuthenticated()">-->
-<!--            <a th:href="@{/my-account}">My Account</a>-->
-<!--</nav>-->
-
 <nav>
     <ul class="email text_align_right">
         <li class="d_none" sec:authorize="isAnonymous()"><a th:href="@{/users/register}"><i class="fa fa-registered"

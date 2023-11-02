@@ -44,6 +44,7 @@
     <a th:href="@{/forecasts/own-added}" sec:authorize="hasRole('Admin')">My Added Forecasts</a>
     <a th:href="@{/testimonial}">Recommendation</a>
     <a th:href="@{/contact}" sec:authorize="isAuthenticated()">Contact</a>
+    <a th:href="@{/my-account}" sec:authorize="isAuthenticated()">My Account</a>
 </div>
 <!-- header -->
 <header>

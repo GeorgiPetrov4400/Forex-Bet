@@ -1156,3 +1156,11 @@ a {
 ul li {
     list-style: none;
 }
+
+.username {
+    color: whitesmoke;
+}
+
+.account .button .button-change {
+    margin-left: 8px;
+}

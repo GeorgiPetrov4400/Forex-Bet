@@ -4,19 +4,79 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
-    <meta charset="UTF-8">
+    <!-- basic -->
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Account</title>
-
-    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/images/favicon.png}">
-    <link rel="stylesheet" th:href="@{/css/my-account-style.css}">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Recommended</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <!-- style css -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- responsive-->
+    <link rel="stylesheet" th:href="@{/css/responsive.css}">
+    <!-- awesome fontfamily -->
+    <link rel="stylesheet"
+          th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
 </head>
+<!-- body -->
+<body class="main-layout">
+<!-- loader  -->
+<div class="loader_bg">
+    <div class="loader"><img th:src="@{/images/loading.gif}" alt=""/></div>
+</div>
+<!-- end loader -->
+<div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="/">Home</a>
+    <a th:href="@{/users/register}">Register</a>
+    <a th:href="@{/users/login}">Login</a>
+    <a th:href="@{/about}">About</a>
+    <a th:href="@{/forecast}">Forecasts</a>
+    <a th:href="@{/forecasts/add}" sec:authorize="hasRole('Admin')">Add Forecast</a>
+    <a th:href="@{/forecasts/own-added}" sec:authorize="hasRole('Admin')">My Added Forecasts</a>
+    <a th:href="@{/testimonial}">Recommendation</a>
+    <a th:href="@{/contact}" sec:authorize="isAuthenticated()">Contact</a>
+    <a class="active" th:href="@{/my-account}" sec:authorize="isAuthenticated()">My Account</a>
+</div>
+<!-- header -->
+<header>
+    <!-- header inner -->
+    <div class="head-top">
+        <div class="container-fluid">
+            <div class="row d_flex">
+                <div class="col-sm-3">
+                    <div class="logo">
+                        <a href="/">Forex Bet</a>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <ul class="social_icon text_align_right d_none">
+                        <li><a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <nav th:replace="~{fragments/commons::nav}"></nav>
+                </div>
+                <div class="col-sm-3">
+                    <wellcome th:replace="~{fragments/commons::wellcome}"></wellcome>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- end header -->
 
-<body>
-<nav th:replace="~{fragments/commons::nav}"></nav>
-
-<main>
+<main class="account">
     <form th:action="@{/my-account}" th:method="patch" th:object="${changeAccountUsernameDTO}"
           class="mx-auto w-25 bg-blur rounded">
 
@@ -44,9 +104,14 @@
 
     </form>
 </main>
-
+<!-- footer-->
 <footer th:replace="~{fragments/commons::footer}"></footer>
-
+<!-- end footer -->
+<!-- Javascript files-->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/jquery-3.0.0.min.js}"></script>
+<script th:src="@{/js/custom.js}"></script>
+<script th:src="@{/js/logout.js}"></script>
 </body>
-
 </html>
