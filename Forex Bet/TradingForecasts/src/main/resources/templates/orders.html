@@ -65,8 +65,6 @@
 <!-- end header -->
 <!-- forecasts -->
 <forecast th:replace="~{fragments/commons::forecast}"></forecast>
-<!-- end forecasts -->
-
 <div class="container bg-blur rounded mt-1 mb-4" th:action="@{/active-forecasts/orders}">
     <div class="active-forecast" style="height: 40vh; overflow: auto">
         <ul th:each="f : ${allActiveForecast}">
@@ -103,7 +101,7 @@
         </ul>
     </div>
 </div>
-
+<!-- end forecasts -->
 <!-- testimonial -->
 <div class="testimonial">
     <div class="container-fluid">
